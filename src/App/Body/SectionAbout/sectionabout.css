@@ -1,0 +1,42 @@
+.section2 {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section2Div {
+    flex: 0 1 49%;
+    margin-bottom: 32px;
+}
+
+.section2Title {
+    margin-bottom: 8px;
+    color: #3E24EA;
+    font-family: 'Visby Bold';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+@media(min-width:768px) {
+    .section2 {
+        margin-top: auto;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .section2Div {
+        margin-bottom: auto;
+        flex: 0 0 30%;
+    }
+}
+
+@media (min-width:1440px) {
+    .section2Title {
+        font-size: 24px;
+    }
+}
+
+@media (min-width:1920px) {
+    .section2Title {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,38 @@
+button {
+    font-family: 'Visby Italic';
+    font-size: 16px;
+}
+
+.button {
+    padding: 17px 24px;
+    color: #3E24EA;
+    border-radius: 150px;
+    border: 1px solid #3E24EA;
+    text-align: center;
+}
+
+.inverse {
+    width: 100%;
+    padding: 17px 24px;
+    color: #3E24EA;
+    background-color: white;
+    border-radius: 150px;
+    border: 1px solid #3E24EA;
+    text-align: center;
+}
+
+.block {
+    display: block;
+}
+
+.header {
+    background-color: rgba(102, 102, 102, 0);
+}
+
+@media (min-width: 1440px) {
+    .button,
+    .inverse {
+        padding: 29px 40px;
+        font-size: 22px;
+    }
+}

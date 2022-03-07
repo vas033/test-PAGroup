@@ -1,0 +1,105 @@
+body {
+    margin: auto;
+    font-family: 'Visby Regular';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+a {
+    text-decoration: none;
+    color: #131027;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.backgroundHead {
+    position: relative;
+    overflow: hidden;
+}
+
+.backgroundHeadImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sectionTitle {
+    margin-bottom: 24px;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.inherit {
+    position: inherit;
+}
+
+.orientCenter {
+    display: flex;
+    justify-content: center;
+}
+
+.paddingSides {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.sectionPadding {
+    padding: 50px 24px;
+}
+
+@media (min-width: 768px) {
+    .paddingSides {
+        padding-left: 63px;
+        padding-right: 63px;
+    }
+    .sectionPadding {
+        padding: 50px 63px;
+    }
+    .sectionTitle {
+        font-size: 80px;
+    }
+}
+
+@media (min-width:1440px) {
+    body {
+        font-size: 20px;
+    }
+    .sectionPadding {
+        padding: 50px 160px;
+    }
+    .sectionTitle {
+        margin-bottom: 0;
+    }
+    .paddingSides {
+        padding-left: 160px;
+        padding-right: 160px;
+    }
+}
+
+@media (min-width:1920px) {
+    .sectionTitle {
+        margin-bottom: 0;
+        font-size: 120px;
+    }
+    .sectionPadding {
+        padding: 50px 208px;
+    }
+    .paddingSides {
+        padding-left: 204px;
+        padding-right: 204px;
+    }
+}

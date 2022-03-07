@@ -1,0 +1,20 @@
+.slider {
+    margin-bottom: 50px;
+}
+
+.image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 21.44px;
+    margin-bottom: 21.44px;
+    margin-right: 21.44px;
+    border: 5px solid #F0F0F8;
+    border-radius: 26.7973px;
+}
+
+@media (min-width: 768px) {
+    .image {
+        width: fit-content;
+    }
+}

@@ -1,0 +1,112 @@
+.sectionPadding {
+    padding: 50px 24px;
+}
+
+.sectionTitle {
+    margin-bottom: 24px;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.subTitleGrey,
+.subTitleGreyTwo,
+.subTitleGreen,
+.subTitleRed,
+.subTitleBeige,
+.subTitleGreenGrey {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 8px 24px;
+    font-size: 18px;
+    line-height: 150%;
+    border-radius: 45px;
+}
+
+.subTitleGrey {
+    background-color: #F7F7FD;
+}
+
+.subTitleGreyTwo {
+    background-color: #F6F8FA;
+}
+
+.subTitleGreen {
+    background-color: #EFF7F3;
+}
+
+.subTitleRed {
+    background-color: #FFF0F0;
+}
+
+.subTitleBeige {
+    background-color: #F8EEEE;
+}
+
+.subTitleGreenGrey {
+    background-color: #EEF4F1;
+}
+
+.italic {
+    font-family: 'Visby Italic';
+}
+
+.marginBottom50 {
+    margin-bottom: 50px;
+}
+
+.marginBottom30 {
+    margin-bottom: 30px;
+}
+
+.paddingLeft24 {
+    padding-left: 24px;
+}
+
+@media (min-width:768px) {
+    .sectionPadding {
+        padding: 50px 63px;
+    }
+    .sectionTitle {
+        font-size: 56px;
+    }
+    .flexList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .flexItem {
+        flex: 0 0 45%
+    }
+    .btn {
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1440px) {
+    .sectionPadding {
+        padding: 50px 160px;
+    }
+    .sectionTitle {
+        width: 70%;
+        font-size: 80px;
+    }
+    .subTitle {
+        font-size: 24px;
+    }
+    .text {
+        width: 81%;
+    }
+}
+
+@media (min-width:1920px) {
+    .sectionPadding {
+        padding: 50px 200px;
+    }
+    .sectionTitle {
+        width: 70%;
+        font-size: 120px;
+        margin-bottom: 100px;
+    }
+}

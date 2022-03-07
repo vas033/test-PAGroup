@@ -1,0 +1,21 @@
+.li {
+    display: flex;
+    width: 90%;
+    align-items: center;
+}
+
+.flex90 {
+    display: flex;
+    width: 90%;
+}
+
+.image {
+    width: 20px;
+    height: 20px;
+    margin-right: 14px;
+}
+
+.textDot {
+    margin-right: 23px;
+    text-align: center;
+}

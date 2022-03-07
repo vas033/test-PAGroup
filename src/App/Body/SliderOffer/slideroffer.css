@@ -1,0 +1,76 @@
+.background {
+    padding: 33px 0px;
+    background-color: #F7F7FAE5;
+    position: relative;
+    overflow: hidden;
+}
+
+.marginSlide {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.backImg {
+    position: absolute;
+}
+
+.backImgRed {
+    top: 0;
+    right: 50%;
+}
+
+.backImgOrange {
+    top: 10%;
+    left: 60%;
+}
+
+.backImgGreen {
+    top: 75%;
+    left: -25%;
+}
+
+@media (min-width: 768px) {
+    .background {
+        margin-left: 14px;
+        margin-right: 14px;
+        padding: 26px 0 44px 50px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    .backImgGreen {
+        top: 65%;
+        left: 37%;
+    }
+    .backImgOrange {
+        opacity: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .background {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding: 69px 110px 110px 110px;
+    }
+    .backImgRed {
+        right: 64%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .background {
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 0px 160px 100px 160px;
+    }
+    .backImgRed {
+        right: 73%;
+    }
+    .backImgOrange {
+        opacity: 1;
+    }
+    .backImgGreen {
+        top: 75%;
+        left: 28%;
+    }
+}

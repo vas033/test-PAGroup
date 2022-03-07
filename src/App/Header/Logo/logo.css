@@ -1,0 +1,46 @@
+.headerLogoDiv {
+    flex: 0 0 201px;
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo {
+    margin-right: 15px;
+}
+
+.logoTitle {
+    font-family: 'Visby Bold';
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.logoTitleMob {
+    display: block;
+}
+
+.logoTitleDesc {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .headerLogoDiv {
+        margin-right: 120px;
+    }
+}
+
+@media (min-width: 1220px) {
+    .headerLogoDiv {
+        flex: 0 0 134px;
+    }
+    .logoTitle {
+        font-family: 'Visby Regular';
+        font-size: 16px;
+        font-weight: normal;
+    }
+    .logoTitleMob {
+        display: none;
+    }
+    .logoTitleDesc {
+        display: block;
+    }
+}

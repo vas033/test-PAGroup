@@ -1,0 +1,33 @@
+.header {
+    margin-top: 32px;
+    margin-bottom: 73px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .header {
+        justify-content: center;
+        margin-bottom: 105px;
+    }
+}
+
+@media (min-width: 767px) {
+    .header {
+        justify-content: space-between;
+        margin-bottom: 129px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        margin-bottom: 100px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .header {
+        margin-bottom: 86px;
+    }
+}

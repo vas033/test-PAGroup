@@ -1,0 +1,95 @@
+.li {
+    display: flex;
+    width: 90%;
+    align-items: center;
+}
+
+.block {
+    display: block;
+}
+
+.slide {
+    padding: 40px 24px;
+    height: 1195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.price,
+.slideTitle {
+    font-family: 'Visby Bold';
+}
+
+.price {
+    font-size: 24px;
+}
+
+.slideTitle {
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 160%;
+    color: #131027;
+}
+
+.subTitle {
+    margin-bottom: 16px;
+}
+
+.borderBottom {
+    border-bottom: 1px solid #b3b3b6;
+}
+
+.listItem {
+    font-size: 20px;
+    line-height: 160%;
+}
+
+.listItem:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.padding24 {
+    padding: 24px 0px;
+}
+
+.image {
+    width: 20px;
+    height: 20px;
+    margin-right: 14px;
+}
+
+.ui {
+    margin: 0;
+    padding-left: 36px;
+}
+
+@media (min-width:768px) {
+    .slide {
+        height: 1167px;
+    }
+    .slideTitle {
+        width: 76%;
+    }
+}
+
+@media (min-width:1440px) {
+    .slideTitle,
+    .price {
+        font-size: 32px;
+    }
+    .slide {
+        height: 1267px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .slide {
+        height: 1172px;
+    }
+}

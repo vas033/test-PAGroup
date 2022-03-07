@@ -1,0 +1,151 @@
+.block {
+    display: block;
+}
+
+.flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    padding: 32px 24px 114px 24px;
+    background-color: #131027;
+    text-align: center;
+}
+
+.container a,
+.container {
+    color: white;
+}
+
+.hiddenLink,
+.title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.title {
+    margin-bottom: 25px;
+}
+
+.hiddenLink {
+    padding-bottom: 17px;
+    font-weight: 300;
+    border-bottom: 2px solid white;
+}
+
+.hiddenLink {
+    margin-bottom: 50px;
+}
+
+.infoContainer,
+.nav {
+    padding-bottom: 50px;
+}
+
+.mail {
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    display: block;
+    border-bottom: 2px solid rgba(152, 150, 168, 0.5);
+    font-size: 24px;
+}
+
+.firmInfo,
+.navLinks {
+    font-size: 20px;
+}
+
+.firmInfo,
+.lisence {
+    color: #9896A8
+}
+
+.lisence {
+    line-height: 160%;
+}
+
+.firmInfo:not(:last-child),
+.navLinks:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+@media (min-width:768px) {
+    .container {
+        padding: 208px 64px 64px 64px;
+        align-items: flex-start;
+    }
+    .title {
+        width: 74%;
+        text-align: start;
+    }
+    .hiddenLink,
+    .title {
+        font-size: 56px;
+    }
+    .hiddenLink {
+        margin-bottom: 178px;
+    }
+    .mail {
+        width: fit-content;
+    }
+    .firmTaxInfo {
+        display: flex;
+    }
+    .firmInfo:first-child {
+        margin-right: 32px;
+    }
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        text-align: start;
+    }
+    .navLinks {
+        flex: 0 0 29%;
+    }
+    .navLinks:not(:last-child) {
+        margin-bottom: auto;
+    }
+    .navLinks:nth-child(-n+3) {
+        margin-bottom: 25px;
+    }
+    .lisence {
+        font-size: 20px;
+        text-align: start;
+    }
+}
+
+@media(min-width: 1440px) {
+    .container {
+        padding: 273px 160px 100px 160px;
+    }
+    .hiddenLink,
+    .title {
+        font-size: 80px;
+    }
+    .title {
+        width: fit-content;
+    }
+    .hiddenLink {
+        margin-bottom: 268px;
+    }
+    .infoNav {
+        display: flex;
+        justify-content: space-between;
+    }
+    .infoContainer {
+        width: 50%
+    }
+}
+
+@media (min-width:1920px) {
+    .container {
+        padding: 273px 208px 100px 208px;
+    }
+    .infoNav {
+        width: 80%;
+    }
+}

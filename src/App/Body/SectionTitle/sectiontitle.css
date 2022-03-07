@@ -1,0 +1,57 @@
+.section1 {
+    margin-bottom: 30px;
+}
+
+.title {
+    line-height: 120%;
+}
+
+.mainBlockText {
+    margin-bottom: 55px;
+}
+
+@media (min-width: 768px) {
+    .section1 {
+        margin-bottom: 65px;
+    }
+    .title {
+        font-family: 'Visby Regular';
+        font-size: 56px;
+    }
+    .text {
+        width: 60%;
+    }
+    .mainBlockText {
+        margin-bottom: 73px;
+    }
+    .bottomDiv {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sectionAbout {
+        flex: 0 0 55%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .section1 {
+        margin-bottom: 105px;
+    }
+    .mainBlockText {
+        margin-bottom: 105px;
+    }
+    .title {
+        font-size: 100px;
+        margin-bottom: 75px;
+    }
+    .text {
+        margin-left: 35%;
+        width: 42%;
+    }
+    .sectionAbout {
+        flex: 0 0 65%;
+    }
+}
+
+@media (min-width: 1920px) {}

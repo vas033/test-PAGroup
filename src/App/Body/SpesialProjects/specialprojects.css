@@ -1,0 +1,113 @@
+.sectionPadding {
+    padding: 50px 24px;
+}
+
+.sectionSpec {
+    background: linear-gradient(0deg, rgba(247, 247, 250, 0.9), rgba(247, 247, 250, 0.9));
+}
+
+.marginBottom50 {
+    margin-bottom: 50px;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.text {
+    width: 95%;
+    font-size: 18px;
+}
+
+.sectionTitle {
+    margin-bottom: 24px;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.marginBottom30 {
+    margin-bottom: 30px;
+}
+
+.paddingSides69 {
+    padding: 0px 69px;
+}
+
+@media (min-width: 768px) {
+    .sectionPadding {
+        margin: 14px 14px 0 14px;
+        padding: 50px 51px;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
+    .sectionTitle {
+        font-size: 56px;
+    }
+    .bold {
+        display: block;
+        font-family: 'Visby Bold Italic';
+    }
+    .sectionSpecContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .flex {
+        flex: 0 0 40%;
+    }
+    .paddingSides69 {
+        padding: 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    .sectionPadding {
+        margin: 50px 50px 0 50px;
+        padding: 50px 110px;
+    }
+    .sectionTitle {
+        font-size: 60px;
+    }
+    .sectionSpecContent {
+        flex-wrap: nowrap;
+    }
+    .flex {
+        flex: 0 0 20%;
+        margin-bottom: 16px;
+    }
+    .bold {
+        display: inline-block;
+    }
+}
+
+@media (min-width: 1920px) {
+    .sectionPadding {
+        margin: 50px 100px 0 100px;
+        padding: 50px;
+    }
+    .sectionTitle {
+        margin-bottom: 49px;
+        font-family: 'Visby Italic';
+        font-size: 60px;
+    }
+    .text {
+        width: 50%;
+        text-align: center;
+    }
+    .flex1920 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sectionSpecContent {
+        flex-wrap: nowrap;
+    }
+    .flex {
+        flex: 0 0 20%;
+        margin-bottom: 16px;
+    }
+    .bold {
+        display: inline-block;
+    }
+}

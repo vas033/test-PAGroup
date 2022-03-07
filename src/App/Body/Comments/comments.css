@@ -1,0 +1,44 @@
+.container {
+    padding: 50px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    align-self: baseline;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+div.comment:not(:last-child) {
+    border-bottom: 1px solid #b3b3b6;
+}
+
+@media(min-width: 768px) {
+    .container {
+        padding: 50px 64px;
+    }
+    .title {
+        font-size: 56px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        padding: 50px 110px;
+    }
+    .title {
+        font-size: 80px;
+        margin-bottom: 100px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        padding: 50px 208px;
+    }
+    .title {
+        font-size: 120px;
+    }
+}

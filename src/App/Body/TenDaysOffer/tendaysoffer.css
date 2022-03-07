@@ -1,0 +1,169 @@
+ul {
+    margin: auto;
+}
+
+.sectionTen {
+    color: white;
+    background-color: #3E24EA;
+    border-radius: 40px;
+}
+
+.container {
+    padding: 0px 24px;
+}
+
+.marginBottom50 {
+    margin-bottom: 50px;
+}
+
+.title {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-size: 32px;
+    line-height: 120%;
+}
+
+.containerImg {
+    margin-bottom: 40px;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.containerImg:last-child {
+    margin-bottom: 25px;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+}
+
+.firstLine {
+    left: 25%;
+}
+
+.secondLine {
+    left: 0;
+}
+
+.padding25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.item {
+    display: block;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.item:nth-child(-n+2) {
+    padding-right: 40%;
+}
+
+.item:not(:last-child) {
+    border-bottom: 1px solid #b3b3b6;
+}
+
+.textItemWidth {
+    width: 100%;
+}
+
+@media(min-width:768px) {
+    .sectionTen {
+        margin: 0 14px 0 14px;
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+    }
+    .title {
+        font-size: 56px;
+    }
+    .container {
+        padding: 0px 50px;
+    }
+    .description {
+        font-size: 24px;
+        line-height: 150%;
+    }
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .item {
+        flex: 0 0 50%;
+        font-size: 20px;
+    }
+    .item:nth-child(-n+2) {
+        padding-right: 0;
+    }
+    .item:nth-last-child(2) {
+        border: none
+    }
+    .item:nth-child(-n+2) .textItemWidth {
+        width: 50%;
+    }
+    .btn {
+        width: fit-content;
+    }
+}
+
+@media(min-width: 1440px) {
+    .sectionTen {
+        margin-left: 50px;
+        margin-right: 50px;
+        padding-bottom: auto;
+    }
+    .container {
+        padding: 50px 110px;
+    }
+    .title,
+    .description {
+        width: 80%;
+    }
+    .item:nth-child(-n+2) .textItemWidth {
+        width: 60%;
+    }
+    .item:nth-last-child(2) .textItemWidth {
+        width: 60%
+    }
+    .item:last-child .textItemWidth {
+        width: 70%
+    }
+    .btn {
+        width: 27%
+    }
+}
+
+@media (min-width:1920px) {
+    .sectionTen {
+        margin-left: 100px;
+        margin-right: 100px;
+        padding-bottom: 0;
+    }
+    .container {
+        padding: 50px;
+    }
+    .title,
+    .description {
+        width: 60%;
+    }
+    .title {
+        font-size: 60px;
+    }
+    .firstLine {
+        left: 17%;
+    }
+    .list {
+        width: 70%;
+        margin-left: 0;
+    }
+    .btn {
+        padding-top: 14px;
+    }
+}

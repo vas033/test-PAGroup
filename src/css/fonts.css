@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'tex heros bold';
+    src: local('tex heros bold') url('./fonts/texgyreheros-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tex heros regular';
+    src: local('tex heros regular') url('./fonts/texgyreheros-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

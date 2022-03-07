@@ -1,0 +1,26 @@
+.mainTitle {
+    margin-bottom: 32px;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.imgTitle {
+    display: block;
+    justify-content: center;
+}
+
+.title strong {
+    font-family: 'Visby Bold';
+}
+
+@media (min-width:1440px) {
+    .text {
+        font-size: 20px;
+    }
+}
