@@ -23,11 +23,23 @@
 @media (min-width: 1440px) {
     .header {
         margin-bottom: 100px;
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+    .hide {
+        opacity: 0;
+        transition: opacity 1s ease;
     }
 }
 
 @media (min-width: 1920px) {
     .header {
         margin-bottom: 86px;
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+    .hide {
+        opacity: 0;
+        transition: opacity 1s ease;
     }
 }
