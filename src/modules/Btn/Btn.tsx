@@ -15,14 +15,14 @@ export function Btn({text, img, inverse = false, a = false, href, header = false
   if (a) {
     if (inverse) {
       return (
-        <a className={classNames(styles.inverse, styles.block)} href={href}>
+        <a className={classNames(styles.inverse, styles.block)} href={href} onClick={(e) => e.preventDefault}>
           {img}
           {text}
         </a>  
       )
     } else {
       return (
-        <a className={classNames(styles.button, styles.block)} href={href}>
+        <a className={classNames(styles.button, styles.block)} href={href} onClick={(e) => e.preventDefault}>
           {img}
           {text}
         </a>
@@ -33,14 +33,14 @@ export function Btn({text, img, inverse = false, a = false, href, header = false
       let headerClass;
       header ? headerClass = classNames(styles.inverse, styles.header) : headerClass = styles.inverse;
       return (
-        <button className={headerClass}>
+        <button className={headerClass} onClick={(e) => e.preventDefault}>
           {img}
           {text}
         </button>  
       )
     } else {
       return (
-        <button className={styles.button}>
+        <button className={styles.button} onClick={(e) => e.preventDefault}>
           {img}
           {text}
         </button>

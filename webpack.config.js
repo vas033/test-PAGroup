@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { default: Slider } = require('react-slick');
 const { webpack } = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV;
 const GLOBAL_CSS_REGEXP = /\.global\.css$/;
@@ -68,6 +69,7 @@ module.exports = {
         },
         devtool: setupDevtool(),
         plugins: [
+                new CleanWebpackPlugin(),
                 new HtmlWebpackPlugin({
                         template: path.resolve(__dirname, '/index.html')
                 })

@@ -11,6 +11,16 @@ button {
     text-align: center;
 }
 
+.button:hover,
+.button:active {
+    color: white;
+    background-color: #3E24EA;
+}
+
+.button:active {
+    border: 1px solid white;
+}
+
 .inverse {
     width: 100%;
     padding: 17px 24px;
@@ -21,12 +31,28 @@ button {
     text-align: center;
 }
 
+.inverse:hover,
+.inverse:active {
+    color: white;
+    background-color: #3E24EA;
+}
+
+.inverse:active {
+    border: 1px solid white;
+}
+
 .block {
     display: block;
 }
 
 .header {
     background-color: rgba(102, 102, 102, 0);
+}
+
+.header:hover,
+.header:active {
+    color: white;
+    background-color: #3E24EA;
 }
 
 @media (min-width: 1440px) {
