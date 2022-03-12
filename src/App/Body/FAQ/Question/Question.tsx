@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import classNames from '../../../../modules/className';
 import styles from './question.css';
 
@@ -8,8 +8,23 @@ interface IQuestion {
   cl: string;
 }
 
+function getCoords(elem: Element) {
+  let box = elem.getBoundingClientRect();
+
+  return {
+    top: box.top + window.pageYOffset,
+  };
+}
+
 export function Question({ question, answer, cl }: IQuestion) {
   const [isShow, setShow] = useState(false);
+
+  let a;
+  const div = document.querySelector(styles.questionContainer);
+  div ? a = getCoords(div) : a= 'nth'
+  console.log(a);
+  console.log(div);
+
   let answerClass;
   let btnClass;
 

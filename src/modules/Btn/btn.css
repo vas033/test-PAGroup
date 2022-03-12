@@ -4,17 +4,47 @@ button {
 }
 
 .button {
+    position: relative;
     padding: 17px 24px;
     color: #3E24EA;
     border-radius: 150px;
     border: 1px solid #3E24EA;
     text-align: center;
+    transition: color 1s;
+    overflow: hidden;
 }
 
 .button:hover,
-.button:active {
+.button:active,
+.inverse:hover,
+.inverse:active,
+.header:hover,
+.header:active {
     color: white;
-    background-color: #3E24EA;
+    transition: color 1s;
+}
+
+.button:before,
+.inverse:before,
+.header:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    color: white;
+    background: #3E24EA;
+    border-radius: 100%;
+    transition: all 0.7s ease;
+    z-index: -1;
+}
+
+.button:hover:before,
+.inverse:hover:before,
+.header:hover:before {
+    height: 100%;
+    border-radius: 150px;
 }
 
 .button:active {
@@ -22,6 +52,7 @@ button {
 }
 
 .inverse {
+    position: relative;
     width: 100%;
     padding: 17px 24px;
     color: #3E24EA;
@@ -29,12 +60,8 @@ button {
     border-radius: 150px;
     border: 1px solid #3E24EA;
     text-align: center;
-}
-
-.inverse:hover,
-.inverse:active {
-    color: white;
-    background-color: #3E24EA;
+    transition: color 1s;
+    overflow: hidden;
 }
 
 .inverse:active {
@@ -46,13 +73,9 @@ button {
 }
 
 .header {
+    position: relative;
     background-color: rgba(102, 102, 102, 0);
-}
-
-.header:hover,
-.header:active {
-    color: white;
-    background-color: #3E24EA;
+    overflow: hidden;
 }
 
 @media (min-width: 1440px) {

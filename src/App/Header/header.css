@@ -24,11 +24,21 @@
     .header {
         margin-bottom: 100px;
         opacity: 1;
-        transition: opacity 1s ease;
     }
     .hide {
+        height: 0;
         opacity: 0;
-        transition: opacity 1s ease;
+        transition: all 1s ease;
+    }
+    .fixed {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 5%;
+        right: 5%;
+        height: 95px;
+        z-index: 2;
+        transition: all 1s ease;
     }
 }
 
@@ -36,10 +46,5 @@
     .header {
         margin-bottom: 86px;
         opacity: 1;
-        transition: opacity 1s ease;
-    }
-    .hide {
-        opacity: 0;
-        transition: opacity 1s ease;
     }
 }

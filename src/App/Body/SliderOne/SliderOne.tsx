@@ -10,10 +10,10 @@ export default class AutoPlay extends React.Component {
       arrows: false,
       centerMode: true,
       infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
       autoplay: true,
-      autoplaySpeed: 2000,
+      speed: 600,
+      autoplaySpeed: 600,
+      cssEase: 'linear',
       variableWidth: true,
     };
     return (

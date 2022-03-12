@@ -21,7 +21,6 @@ import { Offer } from './Body/Offer';
 import { FourReasons } from './Body/FourReasons';
 import { SpecialProjects } from './Body/SpesialProjects'
 import { SectionTitle } from './Body/SectionTitle';
-import { SectionAbout } from './Body/SectionAbout';
 
 export function App() {
   return (
@@ -29,7 +28,9 @@ export function App() {
       <div className={classNames(styles.backgroundHead, styles.paddingSides)}>
         <img className={styles.backgroundHeadImg} src={backHead} alt='bacground header' />
         <div className={styles.inherit}>
+          <div className={styles.header}>
           <Header />
+          </div>
           <SectionTitle />
         </div>
       </div>

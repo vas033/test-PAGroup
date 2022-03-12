@@ -23,8 +23,10 @@ export default class SliderTwo extends React.Component {
       centerPadding: '22px',
       infinite: true,
       autoplay: true,
-      autoplaySpeed: 2000,
+      speed: 4000,
+      autoplaySpeed: 4000,
       variableWidth: true,
+      cssEase: 'linear',
       responsive: [
         {
           breakpoint: 767,

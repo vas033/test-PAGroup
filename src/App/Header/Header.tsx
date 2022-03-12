@@ -3,6 +3,8 @@ import styles from './header.css';
 import { Logo } from './Logo';
 import { NavHeader } from './NavHeader';
 
+let currentPosition = 0;
+
 export function Header() {
   const useScrollPosition = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -20,14 +22,17 @@ export function Header() {
   };
 
   let scrollPosition = useScrollPosition();
-  let header;
+  let header = '';
   if (scrollPosition > 20) {
-    header =  styles.header + ' ' + styles.hide
+    header =  styles.header + ' ' + styles.hide;
   } else {
-    header = styles.header
+    header = styles.header;
   }
-
-  console.log(scrollPosition)
+  
+  if (header.includes(styles.hide)) {
+    scrollPosition < currentPosition && scrollPosition > 25 ? header = styles.header + ' ' + styles.fixed :  header = styles.header;
+    currentPosition = scrollPosition;
+  };
 
   return (
     <div className={header}>

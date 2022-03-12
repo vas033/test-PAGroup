@@ -48,10 +48,9 @@
     .text {
         margin-left: 35%;
         width: 42%;
+        line-height: 160%;
     }
     .sectionAbout {
         flex: 0 0 65%;
     }
 }
-
-@media (min-width: 1920px) {}

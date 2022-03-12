@@ -1,5 +1,4 @@
 import React from 'react';
-import { Btn } from '../../../modules/Btn';
 import questions from '../../arrays/questions';
 import styles from './faq.css';
 import { Question } from './Question';
