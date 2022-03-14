@@ -21,9 +21,7 @@ export function Question({ question, answer, cl }: IQuestion) {
 
   let a;
   const div = document.querySelector(styles.questionContainer);
-  div ? a = getCoords(div) : a= 'nth'
-  console.log(a);
-  console.log(div);
+  div ? a = getCoords(div) : a= 'nth';
 
   let answerClass;
   let btnClass;

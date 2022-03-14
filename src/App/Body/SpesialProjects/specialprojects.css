@@ -1,3 +1,45 @@
+@keyframes strokeOffset {
+    0% {
+        stroke-dashoffset: 0
+    }
+    50% {
+        stroke-dashoffset: 172
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateDes {
+    0% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes rotateDesReverse {
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
 .sectionPadding {
     padding: 50px 24px;
 }
@@ -32,6 +74,41 @@
 
 .paddingSides69 {
     padding: 0px 69px;
+}
+
+.offerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.infinity,
+.topSpec {
+    animation: strokeOffset 2s linear forwards infinite;
+}
+
+.arrows {
+    transform-origin: center;
+    animation: rotate 2s linear reverse infinite;
+}
+
+.imgContainer {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.brush {
+    transform-origin: center;
+    animation: rotateDes 2s linear infinite;
+}
+
+.man {
+    transform-origin: center;
+    animation: rotateDesReverse 2s linear infinite reverse;
 }
 
 @media (min-width: 768px) {

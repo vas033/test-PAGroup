@@ -1,13 +1,20 @@
 import React from 'react';
 import styles from './tendaysoffer.css';
 import { TextDiv } from '../../../modules/TextDiv';
-import firstLine from '../../../img/tenDaysOffer/firstLine.png';
-import secondLine from '../../../img/tenDaysOffer/secondLine.png';
+import one from '../../../img/tenDaysOffer/one.png';
+import two from '../../../img/tenDaysOffer/two.png';
+import three from '../../../img/tenDaysOffer/three.png';
+import four from '../../../img/tenDaysOffer/four.png';
+import five from '../../../img/tenDaysOffer/five.png';
+import six from '../../../img/tenDaysOffer/six.png';
+import seven from '../../../img/tenDaysOffer/seven.png';
+import eight from '../../../img/tenDaysOffer/eight.png';
 import { Image } from '../../../modules/Image/Image'
 import classNames from '../../../modules/className';
 import tenDaysOffer from '../../arrays/tenDaysOfferList';
 import { List } from '../../../modules/List';
 import { Btn } from '../../../modules/Btn';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 export function TenDaysOffer() {
   return (
@@ -21,12 +28,22 @@ export function TenDaysOffer() {
         clTitle={styles.title}
         clText={classNames(styles.marginBottom50, styles.description)}
       />
-      <div className={styles.containerImg}>
-        <Image cl={classNames(styles.image, styles.firstLine)} src={firstLine} alt='first line' />
-      </div>
-      <div className={styles.containerImg}>
-        <Image cl={classNames(styles.image, styles.secondLine)} src={secondLine} alt='second line' />
-      </div>
+      <ScrollAnimation animateIn="bounceInRight" animateOut="bounceOutRight" delay={2}>
+        <div className={styles.containerImg}>
+          <img src={one} alt="one" className={styles.image} />
+          <img src={two} alt="two" className={styles.image} />
+          <img src={three} alt="three" className={styles.image} />
+          <img src={four} alt="four" className={styles.image} />
+        </div>
+      </ScrollAnimation>
+      <ScrollAnimation animateIn="bounceInLeft" animateOut="bounceOutLeft" delay={2}>
+        <div className={styles.containerImg}>
+          <img src={five} alt="five" className={styles.image} />
+          <img src={six} alt="six" className={styles.image} />
+          <img src={seven} alt="seven" className={styles.image} />
+          <img src={eight} alt="eight" className={styles.image} />
+        </div>
+      </ScrollAnimation>
       <ul className={classNames(styles.list, styles.container)}>
         {tenDaysOffer.map((el) => <List cl={classNames(styles.padding25, styles.item)} clLi={styles.textItemWidth} item={el} key={tenDaysOffer.indexOf(el)} />)}
       </ul>

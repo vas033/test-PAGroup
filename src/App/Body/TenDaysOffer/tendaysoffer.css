@@ -24,8 +24,8 @@ ul {
 }
 
 .containerImg {
+    display: flex;
     margin-bottom: 40px;
-    position: relative;
     height: 300px;
     overflow: hidden;
 }
@@ -34,9 +34,8 @@ ul {
     margin-bottom: 25px;
 }
 
-.image {
-    position: absolute;
-    top: 0;
+.image:not(:last-child) {
+    margin-right: 40px;
 }
 
 .firstLine {
