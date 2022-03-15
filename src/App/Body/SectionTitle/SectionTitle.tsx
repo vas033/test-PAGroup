@@ -17,7 +17,7 @@ export function SectionTitle() {
       />
       <div className={styles.bottomDiv}>
         <div>
-          <Btn text="заказать дизайн" inverse={true} header={true} />
+          <Btn text="заказать дизайн" header={true} />
         </div>
         <div className={styles.sectionAbout}>
           <SectionAbout />

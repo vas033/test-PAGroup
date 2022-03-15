@@ -1,0 +1,176 @@
+.menuContainer {
+    position: fixed;
+    top: 5%;
+    right: 3%;
+    z-index: 3;
+}
+
+.container {
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    display: inline-block;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    background: 0 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.burger {
+    position: relative;
+    top: -1px;
+    display: inline-block;
+    width: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+    transition: color .2s;
+}
+
+.burger:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    left: -20px;
+    bottom: -20px;
+}
+
+.burger span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: 5px 0;
+    top: 0;
+    z-index: 1;
+    backface-visibility: hidden;
+    background: currentColor;
+    transition: top .3s .3s, transform .3s;
+}
+
+button.container.open .burger span:first-child {
+    animation: cb-btn_menu-open-top .75s;
+    top: 4px;
+    transform: rotate(45deg) scaleX(1);
+    transition-duration: 0s, 0s;
+}
+
+button.container.open .burger span:last-child {
+    animation: cb-btn_menu-open-bottom .75s;
+    top: -3px;
+    transform: rotate(-45deg) scaleX(1);
+    transition-duration: 0s, 0s;
+}
+
+.menu {
+    padding: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hiddenMenu {
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: white;
+    transition: all .2s linear;
+}
+
+.showMenu {
+    width: 30%;
+    opacity: 1;
+    transition: all .2s linear;
+}
+
+.menu nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu nav a {
+    width: fit-content;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+@keyframes cb-btn_menu-open-top {
+    0% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+        transform: rotate(0) scaleX(1);
+        transform-origin: left center
+    }
+    30% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+        transform: rotate(0) scaleX(0)
+    }
+    30.1% {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transform: rotate(0) scaleX(0)
+    }
+    31% {
+        opacity: 1;
+        top: -5px;
+        left: 3px;
+        transform: rotate(45deg) scaleX(0)
+    }
+    100%,
+    80% {
+        opacity: 1;
+        top: -5px;
+        left: 3px;
+        transform: rotate(45deg) scaleX(1);
+        transform-origin: left center
+    }
+}
+
+@keyframes cb-btn_menu-open-bottom {
+    0% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+        transform: rotate(0) scaleX(1);
+        transform-origin: right center
+    }
+    50% {
+        opacity: 1;
+        top: 0;
+        left: 0;
+        transform: rotate(0) scaleX(0)
+    }
+    50.1% {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        transform: rotate(0) scaleX(0)
+    }
+    51%,
+    55% {
+        opacity: 1;
+        top: -12px;
+        left: -4px;
+        transform: rotate(-45deg) scaleX(0)
+    }
+    100% {
+        opacity: 1;
+        top: -12px;
+        left: -4px;
+        transform: rotate(-45deg) scaleX(1);
+        transform-origin: right center
+    }
+}

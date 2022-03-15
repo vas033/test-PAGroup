@@ -29,7 +29,7 @@ export function App() {
         <img className={styles.backgroundHeadImg} src={backHead} alt='bacground header' />
         <div className={styles.inherit}>
           <div className={styles.header}>
-          <Header />
+            <Header />
           </div>
           <SectionTitle />
         </div>

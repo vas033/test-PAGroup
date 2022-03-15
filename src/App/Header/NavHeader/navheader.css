@@ -4,11 +4,16 @@ nav {
 
 .navigationDiv {
     display: none;
-    flex: 0 0 757px;
+    flex: 0 -1 68%;
 }
 
 .navLink {
     margin-right: 32px;
+}
+
+.navLink:hover {
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
 }
 
 .langBtn {

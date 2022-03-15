@@ -21,17 +21,22 @@ export function Header() {
     return scrollPosition;
   };
 
-  let scrollPosition = useScrollPosition();
-  let header = '';
-  if (scrollPosition > 20) {
-    header =  styles.header + ' ' + styles.hide;
-  } else {
-    header = styles.header;
-  }
-  
-  if (header.includes(styles.hide)) {
-    scrollPosition < currentPosition && scrollPosition > 25 ? header = styles.header + ' ' + styles.fixed :  header = styles.header;
-    currentPosition = scrollPosition;
+  let windowWidth = window.innerWidth;
+  let header = styles.header;
+
+  if (windowWidth >= 1440) {
+    let scrollPosition = useScrollPosition();
+    if (scrollPosition > 20) {
+      header =  styles.header + ' ' + styles.hide;
+    } else {
+      header = styles.header;
+    }
+
+    
+    if (header.includes(styles.hide)) {
+      scrollPosition < currentPosition && scrollPosition > 25 ? header = styles.header + ' ' + styles.fixed :  header = styles.header;
+      currentPosition = scrollPosition;
+    };
   };
 
   return (

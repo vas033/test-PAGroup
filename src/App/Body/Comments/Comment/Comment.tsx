@@ -14,7 +14,7 @@ interface IComment {
 
 export function Comment({ src, name, link, text, cl }: IComment) {
   return (
-    <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutRight' duration={2}>
+    <ScrollAnimation animateIn='bounceInRight' duration={2} animateOnce={true} >
       <div className={classNames(styles.commentContainer, cl)}>
         <div className={styles.flex}>
           <img src={src} alt="User photo" className={styles.photo} />

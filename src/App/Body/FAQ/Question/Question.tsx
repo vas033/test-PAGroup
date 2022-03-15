@@ -8,20 +8,8 @@ interface IQuestion {
   cl: string;
 }
 
-function getCoords(elem: Element) {
-  let box = elem.getBoundingClientRect();
-
-  return {
-    top: box.top + window.pageYOffset,
-  };
-}
-
 export function Question({ question, answer, cl }: IQuestion) {
   const [isShow, setShow] = useState(false);
-
-  let a;
-  const div = document.querySelector(styles.questionContainer);
-  div ? a = getCoords(div) : a= 'nth';
 
   let answerClass;
   let btnClass;
