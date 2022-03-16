@@ -9,6 +9,7 @@ import topSpecImg from '../../../img/specProject/topSpec.png';
 
 export function SpecialProjects() {
   const classes = styles.textCenter + ' ' + styles.paddingSides69 + ' ' + styles.marginBottom50 + ' ' + styles.flex + ' ' + styles.offerContainer;
+  const lastClasses = styles.textCenter + ' ' + styles.paddingSides69 + ' ' + styles.marginBottom16 + ' ' + styles.flex + ' ' + styles.offerContainer;
 
   return (
     <section className={classNames(styles.sectionPadding, styles.sectionSpec)}>
@@ -21,6 +22,7 @@ export function SpecialProjects() {
           text='Это как, дизайнер в штате, но лучше. 
             Мы будем с вами на связи 40 часов в неделю и оперативно выполнять ваши задачи, как будто мы у вас в штате.'
           cl={classNames(styles.marginBottom50, styles.textCenter, styles.text)}
+          clText={styles.descText}
         />
       </div>
       <div className={styles.sectionSpecContent}>
@@ -32,7 +34,7 @@ export function SpecialProjects() {
               <path className={styles.man} d="M4.50275 21.7582C6.64685 28.9896 14.2742 33.1281 21.5056 30.984C28.737 28.8399 32.8758 21.2127 30.7316 13.9813C30.5653 13.4203 30.3623 12.8802 30.1328 12.3581C30.1093 12.2861 30.0786 12.216 30.0405 12.1485C27.2467 6.07193 20.3239 2.79964 13.7287 4.75512C8.96782 6.16673 5.54832 9.95545 4.37886 14.4428C4.34533 14.5332 4.3229 14.6259 4.31288 14.719C3.77585 16.9699 3.79903 19.3848 4.50275 21.7582ZM20.8457 28.7585C14.8414 30.5388 8.50848 27.1024 6.72826 21.0983C6.28184 19.5927 6.16357 18.0663 6.33166 16.5961C11.1808 18.8797 16.7839 19.3257 21.9459 17.7969L21.9572 17.7935C24.3167 17.0939 26.5086 16.0215 28.4926 14.5994C28.4969 14.6134 28.502 14.6271 28.5061 14.6412C30.2863 20.6453 26.85 26.9782 20.8457 28.7585ZM14.3886 6.98064C19.5971 5.4363 25.0512 7.8193 27.5679 12.3971C25.6828 13.8263 23.5779 14.8918 21.297 15.5681L21.2869 15.5711C16.5028 16.9881 11.2948 16.508 6.85304 14.2679C7.99296 10.8776 10.7064 8.07241 14.3886 6.98064Z" fill="#131027" />
             </svg>
           </div>
-          <p>Топовый дизайнер по цене фрилансера</p>
+          <p className={styles.about}>Топовый дизайнер по цене фрилансера</p>
         </div>
         <div className={classes}>
           <div className={styles.imgContainer}>
@@ -40,7 +42,7 @@ export function SpecialProjects() {
               <path className={styles.topSpec} d="M13.9627 23.7222C7.82275 31.4904 2.35605 38.4067 2.35605 38.4067C1.30664 39.6269 1.44522 41.4668 2.66554 42.5161C3.19552 42.9719 3.87168 43.2218 4.57066 43.2206H13.3128V66.5329L41.7538 30.5445C42.7999 29.3214 42.6565 27.482 41.4334 26.436C40.9055 25.9845 40.2335 25.7363 39.539 25.7363H30.7969V2.42407C30.7969 2.42407 21.8275 13.7718 13.9627 23.7222Z" stroke="#131027" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="169.137" strokeDashoffset="169.137" />
             </svg>
           </div>
-          <p>Только проверенные специалисты</p>
+          <p className={styles.about}>Только проверенные специалисты</p>
         </div>
         <div className={classes}>
           <div className={styles.imgContainer}>
@@ -53,15 +55,15 @@ export function SpecialProjects() {
               <path d="M40.5898 29.0944V27.0854" stroke="#131027" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </div>
-          <p>Фиксированная цена и никаких доплат</p>
+          <p className={styles.about}>Фиксированная цена и никаких доплат</p>
         </div>
-        <div className={classes}>
+        <div className={lastClasses}>
           <div className={styles.imgContainer}>
             <svg width="64" height="28" viewBox="0 0 64 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path className={styles.infinity} d="M26.777 20.494C23.7645 23.4957 19.8178 26.3784 15.7698 26.3784C7.32522 26.3784 1.64062 20.7665 1.64062 13.8331C1.64062 6.8994 7.32522 1.28735 15.7698 1.28735C22.9944 1.28735 29.8965 10.4699 31.7401 13.1232C32.5127 13.5207 32.3076 13.8331 32.3076 13.8331C32.3076 13.8331 40.5459 26.3784 48.9907 26.3784C57.4352 26.3784 62.8858 20.7553 62.8858 13.8331C62.8858 6.91059 57.4379 1.28735 48.9907 1.28735C41.8785 1.28735 34.9128 10.1859 32.8915 12.9944Z" stroke="#131027" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" strokeDashoffset="172" strokeDasharray="172" />
             </svg>
           </div>
-          <p>Безлимитные правки</p>
+          <p className={classNames(styles.about, styles.pWidth)}>Безлимитные правки</p>
         </div>
       </div>
     </section>

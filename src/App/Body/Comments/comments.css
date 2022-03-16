@@ -7,8 +7,9 @@
 
 .title {
     align-self: baseline;
-    font-weight: 400;
+    font-family: 'Visby Regular';
     font-size: 32px;
+    letter-spacing: -0.01em;
 }
 
 div.comment:not(:last-child) {
@@ -21,6 +22,7 @@ div.comment:not(:last-child) {
     }
     .title {
         font-size: 56px;
+        line-height: 108%;
     }
 }
 

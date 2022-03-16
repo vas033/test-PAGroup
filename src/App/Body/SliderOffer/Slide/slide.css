@@ -27,18 +27,21 @@
 
 .price {
     font-size: 24px;
+    line-height: 160%;
 }
 
 .slideTitle {
     margin-bottom: 16px;
     font-weight: bold;
     font-size: 32px;
-    line-height: 160%;
+    line-height: 120%;
+    letter-spacing: -0.01em;
     color: #131027;
 }
 
 .subTitle {
     margin-bottom: 16px;
+    font-size: 20px;
 }
 
 .borderBottom {
@@ -55,7 +58,7 @@
 }
 
 .padding24 {
-    padding: 24px 0px;
+    padding-bottom: 24px;
 }
 
 .image {
@@ -69,12 +72,28 @@
     padding-left: 36px;
 }
 
+.flex27 {
+    flex: 0 0 27%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.justifyStart {
+    justify-content: start;
+}
+
 @media (min-width:768px) {
     .slide {
         height: 1167px;
     }
     .slideTitle {
         width: 76%;
+        line-height: 160%;
+        letter-spacing: unset;
+    }
+    .price {
+        font-size: 32px;
     }
 }
 

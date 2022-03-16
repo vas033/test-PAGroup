@@ -22,8 +22,8 @@ export function Offer() {
         <a href="#3D" className={styles.subTitleGreen}> Motion design and 3D </a>
         <a href="#SMM" className={styles.subTitleGrey}> Графический дизайн + SMM </a>
         <a href="#video" className={styles.subTitleRed}>
-          <span>Рекламные ролики </span>
-          <span className={styles.new}>СКОРО</span>
+            <span>Рекламные ролики</span>  
+            <span className={styles.new}>СКОРО</span>
         </a>
       </div>
     </section>

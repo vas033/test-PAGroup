@@ -24,20 +24,19 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 120%;
+    letter-spacing: -0.01em;
 }
 
 .title {
+    font-family: 'Visby Regular';
     margin-bottom: 25px;
 }
 
 .hiddenLink {
+    margin-bottom: 80px;
     padding-bottom: 17px;
-    font-weight: 300;
+    font-family: 'Visby Light';
     border-bottom: 2px solid white;
-}
-
-.hiddenLink {
-    margin-bottom: 50px;
 }
 
 .infoContainer,
@@ -50,12 +49,19 @@
     margin-bottom: 25px;
     display: block;
     border-bottom: 2px solid rgba(152, 150, 168, 0.5);
+    font-family: 'Visby Semibold';
     font-size: 24px;
 }
 
-.firmInfo,
-.navLinks {
+.firmInfo {
     font-size: 20px;
+    line-height: 240%;
+}
+
+.navLinks {
+    font-family: 'Visby Medium';
+    font-size: 20px;
+    letter-spacing: -0.01em;
 }
 
 .firmInfo,
@@ -84,9 +90,11 @@
     .hiddenLink,
     .title {
         font-size: 56px;
+        line-height: 108%;
     }
     .hiddenLink {
         margin-bottom: 178px;
+        font-family: 'Visby Regular';
     }
     .mail {
         width: fit-content;
@@ -105,6 +113,8 @@
     }
     .navLinks {
         flex: 0 0 29%;
+        line-height: 240%;
+        letter-spacing: unset;
     }
     .navLinks:not(:last-child) {
         margin-bottom: auto;
@@ -125,6 +135,7 @@
     .hiddenLink,
     .title {
         font-size: 80px;
+        line-height: 120%;
     }
     .title {
         width: fit-content;

@@ -9,9 +9,11 @@
     }
 }
 
-button {
-    font-family: 'Visby Italic';
+button,
+a {
+    font-family: 'Visby Medium Italic';
     font-size: 16px;
+    line-height: 150%;
 }
 
 .button {
@@ -33,7 +35,7 @@ button {
 }
 
 .inverse {
-    color: #24abea;
+    border: 1px solid white;
 }
 
 .block {

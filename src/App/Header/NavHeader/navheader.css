@@ -29,4 +29,9 @@ nav {
     .navigationDiv {
         display: flex;
     }
+    .navigationDiv button,
+    .navLink {
+        font-family: 'Visby Medium';
+        line-height: 160%;
+    }
 }

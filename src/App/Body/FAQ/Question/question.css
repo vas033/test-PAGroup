@@ -5,7 +5,6 @@
 }
 
 .question {
-    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +18,7 @@
 .title {
     font-size: 20px;
     line-height: 150%;
+    letter-spacing: -0.01em;
 }
 
 .btn {
@@ -38,6 +38,7 @@
 }
 
 .answer {
+    margin-top: 15px;
     line-height: 160%;
     height: 100%;
     opacity: 1;
@@ -54,11 +55,20 @@
     .question {
         font-size: 20px;
     }
+    .answer {
+        margin-top: 25px;
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 1440px) {
-    .question {
-        font-size: 24px;
+    .title {
+        font-size: 28px;
+        line-height: 140%;
+        letter-spacing: unset;
+    }
+    .answer {
+        font-size: 20px;
     }
 }
 

@@ -13,8 +13,8 @@
     margin-bottom: 8px;
     color: #3E24EA;
     font-family: 'Visby Bold';
-    font-weight: 700;
     font-size: 20px;
+    line-height: 150%;
 }
 
 @media(min-width:768px) {
@@ -38,5 +38,6 @@
 @media (min-width:1920px) {
     .section2Title {
         font-size: 32px;
+        line-height: 160%;
     }
 }

@@ -12,18 +12,18 @@ interface IBtn {
 
 export function Btn({ text, inverse = false, a = false, href, header = false }: IBtn) {
 
-  let classes = ' ';
+  let classes = '';
   let mainClass = '';
-  inverse ? classes = classNames(styles.inverse, styles.buttonRipple) : classes = styles.buttonRipple;
+  inverse ? classes = styles.inverse : '';
   header ? mainClass = classNames(styles.button, styles.header) : mainClass = styles.button;
 
   if (a) {
     return (
-      <a className={classNames(styles.button, styles.block)} href={href} onClick={(e) => e.preventDefault}>
+      <a className={classNames(styles.button, styles.block, classes)} href={href} onClick={(e) => e.preventDefault}>
         <span className={styles.buttonTitle}>
           <span data-text={text}>{text}</span>
         </span>
-        <span className={classes}>
+        <span className={styles.buttonRipple}>
           <span></span>
         </span>
       </a>
@@ -31,11 +31,11 @@ export function Btn({ text, inverse = false, a = false, href, header = false }: 
   }
 
   return (
-    <button className={mainClass} onClick={(e) => e.preventDefault}>
+    <button className={classNames(mainClass, classes)} onClick={(e) => e.preventDefault}>
       <span className={styles.buttonTitle}>
         <span data-text={text}>{text}</span>
       </span>
-      <span className={classes}>
+      <span className={styles.buttonRipple}>
         <span></span>
       </span>
     </button>

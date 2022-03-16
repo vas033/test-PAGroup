@@ -20,7 +20,7 @@ export function Comment({ src, name, link, text, cl }: IComment) {
           <img src={src} alt="User photo" className={styles.photo} />
           <div className={styles.column}>
             <div className={styles.name}>{name}</div>
-            <a href={`http://${link}`}>{link}</a>
+            <a  className={styles.link} href={`http://${link}`}>{link}</a>
           </div>
         </div>
         <p className={styles.text}>{text}</p>

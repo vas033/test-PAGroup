@@ -18,17 +18,17 @@ interface IMySlide {
 export function Slide(props: IMySlide) {
   return (
     <div className={classNames(styles.slide, props.cl)}>
-      <div>
+      <div className={styles.flex27}>
         <TextDiv
           title={props.title}
           text={props.text}
           clTitle={styles.slideTitle}
         />
-      </div>
-      <div>
         <div className={classNames(styles.borderBottom, styles.padding24, styles.price)}>{props.price}</div>
-        <ul className={classNames(styles.borderBottom, styles.padding24)}>
+      </div>
+      <div className={classNames(styles.flex27, styles.justifyStart)}>
           <h3 className={styles.subTitle}>Что включено:</h3>
+        <ul className={classNames(styles.borderBottom, styles.padding24)}>
           <li className={classNames(styles.li, styles.listItem)}>
             <div className={styles.image}>
               <svg className={styles.image} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -45,10 +45,12 @@ export function Slide(props: IMySlide) {
           {props.firstList.map((el, index) => <List cl={classNames(styles.block, styles.listItem)} img={true} item={el} key={index} />)}
         </ul>
       </div>
-      <ul className={classNames(styles.padding24, styles.ui)}>
+      <div className={styles.flex27}>
         <h3 className={styles.subTitle}>Предоставляемые услуги:</h3>
-        {props.offer.map((el, index) => <List cl={styles.listItem} item={el} key={index} />)}
-      </ul>
+        <ul className={classNames(styles.padding24, styles.ui)}>
+          {props.offer.map((el, index) => <List cl={styles.listItem} item={el} key={index} />)}
+        </ul>
+      </div>
       <Btn text='хочу написать' />
     </div>
   );

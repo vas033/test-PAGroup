@@ -1,9 +1,10 @@
 .section1 {
-    margin-bottom: 30px;
+    margin-bottom: 3px;
 }
 
 .title {
     line-height: 120%;
+    letter-spacing: -0.01em;
 }
 
 .mainBlockText {
@@ -15,8 +16,10 @@
         margin-bottom: 65px;
     }
     .title {
+        margin-top: 10px;
         font-family: 'Visby Regular';
         font-size: 56px;
+        line-height: 108%;
     }
     .text {
         width: 60%;
@@ -52,5 +55,11 @@
     }
     .sectionAbout {
         flex: 0 0 65%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .title {
+        font-size: 120px;
     }
 }

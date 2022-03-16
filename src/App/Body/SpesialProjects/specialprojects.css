@@ -52,20 +52,28 @@
     margin-bottom: 50px;
 }
 
+.marginBottom16 {
+    margin-bottom: 16px;
+}
+
 .textCenter {
     text-align: center;
 }
 
-.text {
-    width: 95%;
-    font-size: 18px;
+.about {
+    line-height: 160%;
+}
+
+.pWidth {
+    width: 60%;
 }
 
 .sectionTitle {
-    margin-bottom: 24px;
-    font-weight: normal;
+    margin-bottom: 48px;
+    font-family: 'Visby Regular';
     font-size: 32px;
     line-height: 120%;
+    letter-spacing: -0.01em;
 }
 
 .marginBottom30 {
@@ -97,6 +105,7 @@
     display: flex;
     width: 80px;
     height: 80px;
+    margin-bottom: 24px;
     justify-content: center;
     align-items: center;
 }
@@ -114,16 +123,22 @@
 @media (min-width: 768px) {
     .sectionPadding {
         margin: 14px 14px 0 14px;
-        padding: 50px 51px;
+        padding: 50px 49px;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
     }
     .sectionTitle {
         font-size: 56px;
+        line-height: 108%;
     }
     .bold {
         display: block;
         font-family: 'Visby Bold Italic';
+    }
+    .descText {
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: -0.013em;
     }
     .sectionSpecContent {
         display: flex;
@@ -136,6 +151,9 @@
     .paddingSides69 {
         padding: 0;
     }
+    .marginBottom16 {
+        margin-bottom: 50px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -145,6 +163,13 @@
     }
     .sectionTitle {
         font-size: 60px;
+        line-height: 130%;
+    }
+    .descText {
+        width: 86%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 24px;
     }
     .sectionSpecContent {
         flex-wrap: nowrap;
@@ -169,7 +194,7 @@
         font-size: 60px;
     }
     .text {
-        width: 50%;
+        width: 69%;
         text-align: center;
     }
     .flex1920 {

@@ -3,8 +3,10 @@
 }
 
 .title {
-    font-weight: 400;
+    font-family: 'Visby Regular';
     font-size: 32px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
 }
 
 .question:last-child {
@@ -16,9 +18,8 @@
         padding: 50px 64px;
     }
     .title {
-        width: 50%;
         font-size: 56px;
-        line-height: normal;
+        line-height: 108%;
     }
 }
 

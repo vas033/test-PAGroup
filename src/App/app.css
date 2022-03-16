@@ -1,7 +1,6 @@
 body {
     margin: auto;
-    font-family: 'Visby Regular';
-    font-weight: 500;
+    font-family: 'Visby Medium';
     font-size: 16px;
     line-height: 120%;
 }
@@ -16,6 +15,7 @@ h1,
 h2,
 h3 {
     margin: 0;
+    font-weight: unset;
 }
 
 button {
@@ -41,10 +41,10 @@ button {
 }
 
 .sectionTitle {
-    margin-bottom: 24px;
-    font-weight: normal;
+    font-family: 'Visby Regular';
     font-size: 32px;
     line-height: 120%;
+    letter-spacing: -0.01em;
 }
 
 .inherit {
@@ -54,6 +54,7 @@ button {
 .orientCenter {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .paddingSides {
@@ -75,6 +76,7 @@ button {
     }
     .sectionTitle {
         font-size: 80px;
+        line-height: 108%;
     }
 }
 

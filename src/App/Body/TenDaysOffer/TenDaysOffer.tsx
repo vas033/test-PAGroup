@@ -29,7 +29,7 @@ export function TenDaysOffer() {
         clText={classNames(styles.marginBottom50, styles.description)}
       />
       <ScrollAnimation animateIn="bounceInRight" animateOut="bounceOutRight" delay={2}>
-        <div className={styles.containerImg}>
+        <div className={classNames(styles.containerImg, styles.first_line)}>
           <img src={one} alt="one" className={styles.image} />
           <img src={two} alt="two" className={styles.image} />
           <img src={three} alt="three" className={styles.image} />
