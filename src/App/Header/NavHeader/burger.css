@@ -174,3 +174,9 @@ button.container.open .burger span:last-child {
         transform-origin: right center
     }
 }
+
+@media (max-width: 768px) {
+    .showMenu {
+        width: 70%;
+    }
+}
