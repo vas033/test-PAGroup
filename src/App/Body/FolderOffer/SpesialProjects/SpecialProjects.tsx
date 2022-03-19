@@ -1,11 +1,7 @@
 import React from 'react';
-import classNames from '../../../modules/className';
-import { TextDiv } from '../../../modules/TextDiv';
+import classNames from '../../../../modules/className';
+import { TextDiv } from '../../../../modules/TextDiv';
 import styles from './specialprojects.css';
-import designerImg from '../../../img/specProject/designer.png';
-import fixPriceImg from '../../../img/specProject/fixPrice.png';
-import infinityImg from '../../../img/specProject/infinity.svg';
-import topSpecImg from '../../../img/specProject/topSpec.png';
 
 export function SpecialProjects() {
   const classes = styles.textCenter + ' ' + styles.paddingSides69 + ' ' + styles.marginBottom50 + ' ' + styles.flex + ' ' + styles.offerContainer;

@@ -11,7 +11,6 @@ import SliderOne from './Body/SliderOne/SliderOne';
 import "slick-carousel/slick/slick.css";
 import SliderTwo from './Body/SliderTwo/SliderTwo';
 import classNames from '../modules/className';
-import SliderOffer from './Body/SliderOffer/SliderOffer';
 import { TenDaysOffer } from './Body/TenDaysOffer';
 import backHead from '../img/background.png';
 import { Comments } from './Body/Comments';
@@ -19,8 +18,8 @@ import { FAQ } from './Body/FAQ';
 import { Footer } from './Footer';
 import { Offer } from './Body/Offer';
 import { FourReasons } from './Body/FourReasons';
-import { SpecialProjects } from './Body/SpesialProjects'
 import { SectionTitle } from './Body/SectionTitle';
+import { FolderOffer } from './Body/FolderOffer';
 
 export function App() {
   return (
@@ -43,8 +42,7 @@ export function App() {
         </div>
         <FourReasons />
         <h2 className={classNames(styles.sectionTitle, styles.sectionPadding)}>Спецпроекты</h2>
-        <SpecialProjects />
-        <SliderOffer />
+        <FolderOffer />
         <TenDaysOffer />
         <Comments />
         <FAQ />

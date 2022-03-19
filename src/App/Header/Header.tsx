@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { scroll } from '../../hooks/scroll';
 import styles from './header.css';
 import { Logo } from './Logo';
 import { NavHeader } from './NavHeader';
@@ -6,23 +7,12 @@ import { NavHeader } from './NavHeader';
 let currentPosition = 0;
 
 export function Header() {
-  const [scrollPos, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const updatePosition = () => {
-      setScrollPosition(window.pageYOffset);
-    };
-    window.addEventListener("scroll", updatePosition);
-    updatePosition();
-    return () => {
-      window.removeEventListener("scroll", updatePosition);
-    }
-  }, []);
+  let pos = scroll();
   
   let header = styles.header;
 
   if (window.innerWidth >= 1440) {
-    let scrollPosition = scrollPos;
+    let scrollPosition = pos.scrollPos;
     if (scrollPosition > 20) {
       header = styles.header + ' ' + styles.hide;
     } else {

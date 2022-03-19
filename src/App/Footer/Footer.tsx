@@ -1,57 +1,40 @@
 import React, { useEffect, useState } from 'react';
+import { scroll } from '../../hooks/scroll';
 import classNames from '../../modules/className';
 import getCoords from '../../modules/getCoords';
 import navList from '../arrays/navList';
 import styles from './footer.css';
 
 export function Footer() {
-  const [scrollPos, setScrollPosition] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(0);
+  let pos = scroll();
 
-  useEffect(() => {
-    const updatePosition = () => {
-      setScrollPosition(window.pageYOffset);
-      setWindowHeight(window.innerHeight);
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("scroll", updatePosition);
-    updatePosition();
-    return () => {
-      window.removeEventListener("scroll", updatePosition);
-    }
-  }, []);
+  const footer = document.getElementById('footer');
+  const content = document.getElementById('footerContent')
+  let coords;
 
+  if (footer && content) {
+    coords = getCoords(footer);
+    footer.style.overflow = 'hidden';
+    content.style.transform = 'translate3d( 0, -50%, 0)';
+    content.style.willChange = 'transform';
 
-  if (windowWidth > 1200) {
+    let currentPos = pos.scrollPos + pos.windowHeight;
 
-    const footer = document.getElementById('footer');
-    const content = document.getElementById('footerContent')
-    let coords;
+    if (currentPos > coords.top) {
 
-    if (footer && content) {
-      coords = getCoords(footer);
-      footer.style.overflow = 'hidden';
-      content.style.transform = 'translate3d( 0, -100%, 0)';
-      content.style.willChange = 'transform';
+      let tenThousandth = (coords.bottom - coords.top) / 10000;
+      let showedBlockHeight = currentPos - coords.top;
+      let percent = -50 + showedBlockHeight * tenThousandth;
 
-      let currentPos = scrollPos + windowHeight;
-
-      if (currentPos > coords.top) {
-
-        let tenThousandth = (coords.bottom - coords.top) / 10000;
-        let showedBlockHeight = currentPos - coords.top;
-        let percent = -100 + showedBlockHeight * tenThousandth;
-
-        if (content && percent <= 0) {
-          content.style.transform = `translate3d( 0, ${percent}%, 0)`;
-          content.style.willChange = 'transform';
-        } else {
-          content.style.transform = 'translate3d( 0, 0, 0)';
-        }
+      if (content && percent <= 0) {
+        content.style.transform = `translate3d( 0, ${percent}%, 0)`;
+        content.style.willChange = 'transform';
+      } else {
+        content.style.transform = 'translate3d( 0, 0, 0)';
       }
     }
   }
+
 
 
   return (

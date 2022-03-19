@@ -1,8 +1,8 @@
 import React from 'react';
-import { Btn } from '../../../../modules/Btn';
-import classNames from '../../../../modules/className';
-import { TextDiv } from '../../../../modules/TextDiv';
-import { List } from '../../../../modules/List';
+import { Btn } from '../../../../../modules/Btn';
+import classNames from '../../../../../modules/className';
+import { TextDiv } from '../../../../../modules/TextDiv';
+import { List } from '../../../../../modules/List';
 import styles from './slide.css';
 
 interface IMySlide {

@@ -2,12 +2,12 @@ import React from 'react';
 import styles from './slideroffer.css';
 import Slider from "react-slick";
 import { Slide } from './Slide/Slide';
-import slides from '../../arrays/sliderOffer';
-import { Image } from '../../../modules/Image/Image';
-import classNames from '../../../modules/className';
-import backRed from '../../../img/backs/backRed.png';
-import backOrange from '../../../img/backs/backOrange.png';
-import backGreen from '../../../img/backs/backGreen.png';
+import slides from '../../../arrays/sliderOffer';
+import { Image } from '../../../../modules/Image/Image';
+import classNames from '../../../../modules/className';
+import backRed from '../../../../img/backs/backRed.png';
+import backOrange from '../../../../img/backs/backOrange.png';
+import backGreen from '../../../../img/backs/backGreen.png';
 
 const className = styles.background;
 
