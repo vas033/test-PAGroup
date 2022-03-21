@@ -18,7 +18,7 @@ a {
 
 .button {
     position: relative;
-    padding: 17px 24px;
+    padding: 16px 23px;
     color: #3E24EA;
     background-color: #fff;
     border-radius: 150px;
@@ -131,7 +131,14 @@ a {
 @media (min-width: 1440px) {
     .button,
     .inverse {
-        padding: 29px 40px;
+        padding: 25px 32px;
         font-size: 22px;
+    }
+    .header {
+        padding: 29px 39px;
+    }
+    .inverse {
+        padding-top: 29px;
+        padding-bottom: 29px;
     }
 }

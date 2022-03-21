@@ -1,0 +1,19 @@
+.container {
+    padding: 10px 24px;
+    position: fixed;
+    left: 5%;
+    bottom: 5%;
+    background-color: #3E24EA;
+    border-radius: 50px;
+    z-index: 3;
+}
+
+.desc {
+    margin-right: 15px;
+    color: white;
+}
+
+.desc,
+.btn {
+    display: inline-block;
+}

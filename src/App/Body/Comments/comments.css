@@ -13,7 +13,7 @@
 }
 
 div.comment:not(:last-child) {
-    border-bottom: 1px solid #b3b3b6;
+    border-bottom: 1px solid #DDDCE7;
 }
 
 @media(min-width: 768px) {
@@ -33,6 +33,10 @@ div.comment:not(:last-child) {
     .title {
         font-size: 80px;
         margin-bottom: 100px;
+    }
+    .btn button {
+        padding-top: 29px;
+        padding-bottom: 29px;
     }
 }
 

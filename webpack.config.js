@@ -34,6 +34,16 @@ module.exports = {
                                 use: ['ts-loader'],
                         },
                         {
+                                test: GLOBAL_CSS_REGEXP,
+                                use: ['style-loader', 'css-loader']
+
+                        },
+                        {
+                                test: SLICK_CSS,
+                                use: ['style-loader', 'css-loader']
+
+                        },
+                        {
                                 test: /\.css$/,
                                 use: [
                                         'style-loader',
@@ -51,11 +61,6 @@ module.exports = {
                                 exclude: [GLOBAL_CSS_REGEXP, SLICK_CSS]
                         },
                         {
-                                test: [GLOBAL_CSS_REGEXP, SLICK_CSS],
-                                use: ['style-loader', 'css-loader']
-
-                        },
-                        {
                                 test: /\.(png|jpg|svg)$/i,
                                 use: {
                                         loader: 'file-loader',
@@ -71,7 +76,8 @@ module.exports = {
         plugins: [
                 new CleanWebpackPlugin(),
                 new HtmlWebpackPlugin({
-                        template: path.resolve(__dirname, '/index.html')
+                        template: path.resolve(__dirname, '/index.html'),
+                        favicon: path.resolve(__dirname, 'src/img/logo.svg')
                 })
         ]
 }

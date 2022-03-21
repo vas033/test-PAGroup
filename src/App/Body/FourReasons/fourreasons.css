@@ -64,6 +64,10 @@
     padding-left: 24px;
 }
 
+.btn {
+    text-align: center;
+}
+
 @media (min-width:768px) {
     .sectionPadding {
         padding: 50px 63px;

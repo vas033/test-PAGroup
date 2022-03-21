@@ -5,9 +5,9 @@ import { Slide } from './Slide/Slide';
 import slides from '../../../arrays/sliderOffer';
 import { Image } from '../../../../modules/Image/Image';
 import classNames from '../../../../modules/className';
-import backRed from '../../../../img/backs/backRed.png';
-import backOrange from '../../../../img/backs/backOrange.png';
-import backGreen from '../../../../img/backs/backGreen.png';
+import backRed from '../../../../img/backs/backRed.svg';
+import backOrange from '../../../../img/backs/backOrange.svg';
+import backGreen from '../../../../img/backs/backGreen.svg';
 
 const className = styles.background;
 
@@ -33,6 +33,9 @@ export default class SliderOffer extends React.Component {
       ]
     };
 
+    const firstSlide = document.querySelector(`.${styles.marginSlide}`);
+    firstSlide ? firstSlide.classList.add(`${styles.marginLeftFirst}`) : '' ;
+    
     return (
       <div className={styles.background}>
         <Image cl={classNames(styles.backImg, styles.backImgRed)} src={backRed} alt='background red' />

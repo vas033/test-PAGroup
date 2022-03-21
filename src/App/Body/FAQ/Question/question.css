@@ -1,7 +1,7 @@
 .questionContainer {
     padding-top: 50px;
     padding-bottom: 50px;
-    border-bottom: 1px solid #b3b3b6;
+    border-bottom: 1px solid #DDDCE7;
 }
 
 .question {
@@ -48,6 +48,7 @@
 .answer.hidden {
     height: 0;
     opacity: 0;
+    margin-top: 0;
     transition: all 0.2s ease-in-out;
 }
 

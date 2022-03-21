@@ -9,9 +9,11 @@ export function Comments() {
     <section className={styles.container}>
       <h2 className={styles.title}>Отзывы</h2>
       <div>
-        {comments.map(el => <Comment cl={styles.comment} src={el.src} name={el.name} link={el.link} text={el.text} key={comments.indexOf(el)}/>)}
+        {comments.map(el => <Comment cl={styles.comment} src={el.src} name={el.name} link={el.link} text={el.text} key={comments.indexOf(el)} />)}
       </div>
-      <Btn text='посмотреть все отзывы' />
+      <div className={styles.btn}>
+        <Btn text='посмотреть все отзывы' />
+      </div>
     </section>
   );
 }

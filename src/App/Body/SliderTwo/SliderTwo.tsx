@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './slidertwo.css';
 import Slider from "react-slick";
-// import sliderTwoImg from '../../arrays/sliderTwoArray';
 import { Image } from '../../../modules/Image/Image';
 import image1 from '../../../img/sliderTwo/image1.png';
 import image2 from '../../../img/sliderTwo/image2.png';

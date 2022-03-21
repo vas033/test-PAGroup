@@ -13,14 +13,13 @@
     border-radius: 26.7973px;
 }
 
-.image:hover {
-    transform: scale(1.2, 1.2);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
 @media (min-width: 768px) {
     .image {
         width: fit-content;
+    }
+    .image:hover {
+        transform: scale(1.2, 1.2);
+        transition: transform 0.3s ease;
+        cursor: pointer;
     }
 }

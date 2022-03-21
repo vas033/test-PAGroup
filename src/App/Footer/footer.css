@@ -1,3 +1,15 @@
+@keyframes borderAnim {
+    0% {
+        transform: translate(-100%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
 .block {
     display: block;
 }
@@ -32,11 +44,40 @@
     margin-bottom: 25px;
 }
 
-.hiddenLink {
+.hiddenLinkContainer {
     margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.hiddenLink {
     padding-bottom: 17px;
+    display: block;
     font-family: 'Visby Light';
-    border-bottom: 2px solid white;
+}
+
+.hiddenLinkBorder {
+    border: 1px solid rgba(152, 150, 168, 0.5);
+    transition: border-color .2s ease;
+}
+
+.hiddenLinkBorder:before {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform .3s ease;
+}
+
+.hiddenLink:hover+.hiddenLinkBorder {
+    border: none;
+}
+
+.hiddenLink:hover+.hiddenLinkBorder:before {
+    display: block;
+    border: 1px solid white;
+    transform: translateX(0);
 }
 
 .infoContainer,
@@ -92,8 +133,10 @@
         font-size: 56px;
         line-height: 108%;
     }
-    .hiddenLink {
+    .hiddenLinkContainer {
         margin-bottom: 178px;
+    }
+    .hiddenLink {
         font-family: 'Visby Regular';
     }
     .mail {
@@ -140,7 +183,7 @@
     .title {
         width: fit-content;
     }
-    .hiddenLink {
+    .hiddenLinkContainer {
         margin-bottom: 268px;
     }
     .infoNav {
