@@ -5,22 +5,27 @@ import { SpecialProjects } from './SpesialProjects';
 import { scroll } from '../../../hooks/scroll';
 import SliderOffer from './SliderOffer/SliderOffer';
 
+interface IMyFolderOffer {
+  scrollPos?: number;
+  windowHeight?: number;
+  windowWidth?: number;
+}
+
 let diff = 0;
 let scaleCoeff = 1;
 
-export function FolderOffer() {
-  let pos = scroll();
+export function FolderOffer({scrollPos, windowHeight, windowWidth}:IMyFolderOffer) {
   const offer = document.getElementById('folderOffer');
 
-  if (offer) {
+  if (offer && scrollPos) {
     let coordsOffer = getCoords(offer);
     let animHeight = coordsOffer.bottom - coordsOffer.top;
 
-    if (pos.scrollPos > coordsOffer.bottom - animHeight) {
+    if (scrollPos > coordsOffer.bottom - animHeight) {
       offer.style.willChange = 'transform';
       
       let percent = animHeight * 0.00001;
-      diff = 13 - (coordsOffer.bottom - pos.scrollPos) * percent;
+      diff = 13 - (coordsOffer.bottom - scrollPos) * percent;
       scaleCoeff = 1 - diff * 0.01;
 
       if (diff >= 0 && scaleCoeff >= 0.9) {
@@ -34,7 +39,7 @@ export function FolderOffer() {
   return (
     <div id='folderOffer'>
       <SpecialProjects />
-      <SliderOffer />
+      <SliderOffer scrollPos={scrollPos} windowWidth={windowWidth} />
     </div>
   );
 }

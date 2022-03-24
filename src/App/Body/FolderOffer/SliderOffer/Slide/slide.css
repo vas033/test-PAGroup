@@ -1,3 +1,25 @@
+@keyframes animSlide {
+    0% {
+        transform: translateX(0%)
+    }
+    25% {
+        transform: translateX(-2%);
+    }
+    50% {
+        transform: translateX(0%);
+    }
+    75% {
+        transform: translateX(2%);
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+.cardAnim {
+    animation: animSlide 2s linear 2;
+}
+
 .li {
     display: flex;
     width: 90%;
@@ -47,12 +69,12 @@
 .borderBottom {
     padding-bottom: 24px;
     margin-bottom: 24px;
-    box-shadow: inset 0px -2px 0px #F0F0F9;
+    border-bottom: 2px solid #F0F0F9;
 }
 
 .borderTop {
     padding-top: 24px;
-    box-shadow: inset 0px 2px 0px #F0F0F9;
+    border-top: 2px solid #F0F0F9;
 }
 
 .listItem {
@@ -92,7 +114,7 @@
 }
 
 .flex33 {
-    flex: 0 0 33%;
+    flex: 0 0 32%;
 }
 
 .flex40 {

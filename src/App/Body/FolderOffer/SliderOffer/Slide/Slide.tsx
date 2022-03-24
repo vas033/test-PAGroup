@@ -4,6 +4,8 @@ import classNames from '../../../../../modules/className';
 import { TextDiv } from '../../../../../modules/TextDiv';
 import { List } from '../../../../../modules/List';
 import styles from './slide.css';
+import { generateRandomString } from '../../../../../modules/generateId';
+import getCoords from '../../../../../modules/getCoords';
 
 interface IMySlide {
   cl?: string;
@@ -13,18 +15,38 @@ interface IMySlide {
   designer?: string;
   firstList: string[];
   offer: string[];
+  scrollPos?: number;
+  windowWidth?: number;
 }
 
+const id = generateRandomString();
+
 export function Slide(props: IMySlide) {
+  if (props.windowWidth && props.windowWidth < 768) {
+    const card = document.getElementById(id);
+  
+    if (card && props.scrollPos) {
+      const topCard = getCoords(card).top;
+      const bottomCard = getCoords(card).bottom;
+  
+      if (props.scrollPos >= topCard - 30) {
+        card.classList.add(styles.cardAnim);
+      } else if (props.scrollPos < topCard -30 || props.scrollPos > bottomCard) {
+        card.classList.remove(styles.cardAnim);
+      }
+    }
+  }
+
+
   return (
-    <div className={classNames(styles.slide, props.cl)}>
+    <div id={id} className={classNames(styles.slide, props.cl)}>
       <div className={classNames(styles.flex33, styles.borderBottom)}>
         <TextDiv
           title={props.title}
           text={props.text}
           clTitle={styles.slideTitle}
         />
-        <div className={classNames(styles.padding24, styles.price)}>{props.price}</div>
+        <div className={styles.price}>{props.price}</div>
       </div>
       <div className={classNames(styles.flex25, styles.justifyStart)}>
         <h3 className={styles.subTitle}>Что включено:</h3>
@@ -46,8 +68,8 @@ export function Slide(props: IMySlide) {
         </ul>
       </div>
       <div className={classNames(styles.flex40, styles.borderTop)}>
-        <h3 className={styles.subTitle}>Предоставляемые услуги:</h3>
         <ul className={classNames(styles.padding24, styles.ui)}>
+          <h3 className={styles.subTitle}>Предоставляемые услуги:</h3>
           {props.offer.map((el, index) => <List cl={styles.listItem} item={el} key={index} />)}
         </ul>
         <div className={styles.btnContainer}>

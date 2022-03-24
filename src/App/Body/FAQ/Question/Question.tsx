@@ -1,5 +1,6 @@
 import React, { ReactElement, useEffect, useState } from 'react';
 import classNames from '../../../../modules/className';
+import { generateRandomString } from '../../../../modules/generateId';
 import styles from './question.css';
 
 interface IQuestion {
@@ -8,10 +9,15 @@ interface IQuestion {
   cl: string;
 }
 
-export function Question({ question, answer, cl }: IQuestion) {
-  const [isShow, setShow] = useState(false);
+const fullHeight = 100;
+let height = 0;
 
-  let answerClass;
+
+export function Question(this: any, { question, answer, cl }: IQuestion) {
+  const [isShow, setShow] = useState(false);
+  const id = generateRandomString();
+
+  let answerClass = styles.answer;
   let btnClass;
 
   if (isShow) {
@@ -20,11 +26,11 @@ export function Question({ question, answer, cl }: IQuestion) {
   } else {
     answerClass = classNames(styles.answer, styles.hidden);
     btnClass = styles.btn;
-  };
+  }
 
   return (
     <div className={classNames(styles.questionContainer, cl)}>
-      <div className={styles.question} onClick={() => setShow(!isShow)}>
+      <div className={styles.question} onClick={()=> setShow(!isShow)}>
         <h3 className={styles.title}>{question}</h3>
         <button className={btnClass}>
           <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +38,11 @@ export function Question({ question, answer, cl }: IQuestion) {
           </svg>
         </button>
       </div>
-      <div className={answerClass}>{answer}</div>
+      <div id={id} className={answerClass}>
+        <p>
+          {answer}
+        </p>
+      </div>
     </div>
   );
 }

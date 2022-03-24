@@ -1,24 +1,42 @@
-nav {
-    font-size: 16px;
-}
-
 .navigationDiv {
     display: none;
     flex: 0 -1 68%;
+    font-size: 16px;
 }
 
 .navLink {
     margin-right: 32px;
+    overflow: hidden;
 }
 
-.navLink:hover {
+.navSpan {
+    display: block;
     padding-bottom: 5px;
+}
+
+.navBorder {
+    padding-bottom: unset;
+    transform: translateX(-100%);
     border-bottom: 2px solid black;
+    transition: transform .3s ease;
+}
+
+.navLink:hover .navBorder {
+    transform: translateX(0%);
 }
 
 .langBtn {
     display: inline;
     padding: 0;
+}
+
+.langBtn:hover {
+    cursor: pointer;
+}
+
+.langBtn,
+.langBtn+span {
+    color: #13102781;
 }
 
 .active {
@@ -28,6 +46,9 @@ nav {
 @media (min-width: 768px) {
     .navigationDiv {
         display: flex;
+    }
+    .navLink {
+        display: inline-block;
     }
     .navigationDiv button,
     .navLink {

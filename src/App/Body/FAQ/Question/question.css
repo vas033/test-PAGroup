@@ -1,7 +1,11 @@
 .questionContainer {
     padding-top: 50px;
     padding-bottom: 50px;
-    border-bottom: 1px solid #DDDCE7;
+    /* border-bottom: 1px solid #DDDCE7; */
+}
+
+.questionContainer:not(:first-child) {
+    border-top: 1px solid #DDDCE7;
 }
 
 .question {
@@ -42,14 +46,13 @@
     line-height: 160%;
     height: 100%;
     opacity: 1;
-    transition: opacity 0.4s ease-in-out, height 0.4s ease;
+    transition: all 0.2s linear;
 }
 
 .answer.hidden {
     height: 0;
     opacity: 0;
     margin-top: 0;
-    transition: all 0.2s ease-in-out;
 }
 
 @media (min-width:768px) {
@@ -58,6 +61,7 @@
     }
     .answer {
         margin-top: 25px;
+        width: 90%;
         font-size: 16px;
     }
 }

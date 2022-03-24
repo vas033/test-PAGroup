@@ -12,8 +12,8 @@
     letter-spacing: -0.01em;
 }
 
-div.comment:not(:last-child) {
-    border-bottom: 1px solid #DDDCE7;
+.commentContainer .comment {
+    box-shadow: 0px -2px 0px #DDDCE7;
 }
 
 @media(min-width: 768px) {
@@ -24,6 +24,9 @@ div.comment:not(:last-child) {
         font-size: 56px;
         line-height: 108%;
     }
+    .btn {
+        margin-top: 50px;
+    }
 }
 
 @media (min-width: 1440px) {
@@ -33,6 +36,9 @@ div.comment:not(:last-child) {
     .title {
         font-size: 80px;
         margin-bottom: 100px;
+    }
+    .btn {
+        margin-top: 100px;
     }
     .btn button {
         padding-top: 29px;

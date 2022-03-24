@@ -34,6 +34,8 @@ button {
 }
 
 .backgroundHead {
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
 }
@@ -53,9 +55,10 @@ button {
     letter-spacing: -0.01em;
 }
 
-.inherit {
-    position: inherit;
-}
+
+/* .inherit {
+    padding-top: 168px;
+} */
 
 .orientCenter {
     display: flex;
@@ -100,6 +103,9 @@ button {
         padding-left: 160px;
         padding-right: 160px;
     }
+    /* .inherit {
+        padding-top: 168px;
+    } */
 }
 
 @media (min-width:1920px) {

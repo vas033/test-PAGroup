@@ -48,11 +48,11 @@ export function TenDaysOffer() {
     second.style.willChange = 'transform';
 
     if (currentPos > coordsFirst.top) {
-      percentFirst >= -20 ? first.style.transform = `translateX(${percentFirst}%)` : first.style.transform = 'translateX(-20%)';
+      percentFirst >= -5 ? first.style.transform = `translateX(${percentFirst}%)` : first.style.transform = 'translateX(-5%)';
     };
 
     if (currentPos > coordsFirst.top) {
-      percentSecond <= 0 ? second.style.transform = `translateX(${percentSecond}%)` : second.style.transform = 'translateX(0)';
+      percentSecond <= 20 ? second.style.transform = `translateX(${percentSecond}%)` : second.style.transform = 'translateX(20%)';
     }
   }
 

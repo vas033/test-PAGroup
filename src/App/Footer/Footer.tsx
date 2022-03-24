@@ -47,7 +47,10 @@ export function Footer() {
         </div>
         <div className={styles.infoNav}>
           <div className={styles.infoContainer}>
-            <a className={styles.mail} href="mailto:dsgn@pagroup.ru">dsgn@pagroup.ru</a>
+            <div className={styles.hiddenLinkContainer}>
+              <a className={styles.mail} href="mailto:dsgn@pagroup.ru">dsgn@pagroup.ru</a>
+              <div className={styles.hiddenLinkBorder}></div>
+            </div>
             <div className={styles.firmTaxInfo}>
               <p className={styles.firmInfo}>ИП Антипов ПН</p>
               <p className={styles.firmInfo}>ИНН 550516521644</p>

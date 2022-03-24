@@ -32,7 +32,12 @@ export function NavHeader() {
         <div className={burger.hiddenMenu} id='menu'>
           <div className={burger.menu}>
             <nav className={styles.nav}>
-              {navHeader.map(el => <a className={styles.navLink} href={el.link} key={navHeader.indexOf(el)} >{el.name}</a>)}
+              {navHeader.map(el => 
+                  <a className={styles.navLink} href={el.link} key={navHeader.indexOf(el)} >
+                    <span className={styles.navSpan}>{el.name}</span>
+                    <span className={classNames(styles.navSpan, styles.navBorder)}></span>
+                    </a>                  
+              )}
             </nav>
             <div>
               <button
@@ -68,7 +73,12 @@ export function NavHeader() {
     return (
       <div className={styles.navigationDiv}>
         <nav className={styles.nav}>
-          {navHeader.map(el => <a className={styles.navLink} href={el.link} key={navHeader.indexOf(el)} >{el.name}</a>)}
+          {navHeader.map(el => 
+                  <a className={styles.navLink} href={el.link} key={navHeader.indexOf(el)} >
+                    <span className={styles.navSpan}>{el.name}</span>
+                    <span className={classNames(styles.navSpan, styles.navBorder)}></span>
+                    </a>                  
+              )}
         </nav>
         <div>
           <button

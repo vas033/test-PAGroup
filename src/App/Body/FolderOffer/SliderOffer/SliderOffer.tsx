@@ -10,8 +10,16 @@ import backOrange from '../../../../img/backs/backOrange.svg';
 import backGreen from '../../../../img/backs/backGreen.svg';
 
 const className = styles.background;
+interface IMyProps {
+  scrollPos?: number;
+  windowHeight?: number;
+  windowWidth?: number;
+}
 
-export default class SliderOffer extends React.Component {
+export default class SliderOffer extends React.Component<IMyProps> {
+  constructor(props:IMyProps){
+    super(props);
+}
   render() {
     let settings = {
       arrows: false,
@@ -42,7 +50,7 @@ export default class SliderOffer extends React.Component {
         <Image cl={classNames(styles.backImg, styles.backImgOrange)} src={backOrange} alt='background orange' />
         <Image cl={classNames(styles.backImg, styles.backImgGreen)} src={backGreen} alt='background Green' />
         <Slider {...settings}>
-          {slides.map(({ key, title, text, price, designer, firstList, offer }) => <Slide key={key} cl={styles.marginSlide} title={title} text={text} price={price} designer={designer} firstList={firstList} offer={offer} />)}
+          {slides.map(({ key, title, text, price, designer, firstList, offer }) => <Slide key={key} cl={styles.marginSlide} title={title} text={text} price={price} designer={designer} firstList={firstList} offer={offer} scrollPos={this.props.scrollPos} windowWidth={this.props.windowWidth} />)}
         </Slider>
       </div>
     );

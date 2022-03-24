@@ -6,15 +6,20 @@ export const scroll = () => {
         const [windowWidth, setWindowWidth] = useState(0);
 
         useEffect(() => {
-                const updatePosition = () => {
-                        setScrollPosition(window.pageYOffset);
+                const windowSize = () => {
                         setWindowHeight(window.innerHeight);
                         setWindowWidth(window.innerWidth);
+                }
+                const updatePosition = () => {
+                        setScrollPosition(window.pageYOffset);
                 };
                 window.addEventListener("scroll", updatePosition);
+                window.addEventListener("resize", windowSize);
                 updatePosition();
+                windowSize();
                 return () => {
                         window.removeEventListener("scroll", updatePosition);
+                        window.removeEventListener("resize", windowSize);
                 }
         }, []);
 

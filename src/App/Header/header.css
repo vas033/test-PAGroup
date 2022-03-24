@@ -3,6 +3,10 @@
     margin-bottom: 73px;
     display: flex;
     align-items: center;
+    position: absolute;
+    top: 0;
+    left: 11.3%;
+    right: 11.3%;
     overflow: hidden;
 }
 
@@ -25,23 +29,24 @@
         opacity: 1;
     }
     .hide {
-        height: 0;
-        opacity: 0;
-        transition: height 1s ease;
+        top: -100%;
     }
-    .fixed {
+    .fixed,
+    .hide {
         margin: 0;
         padding-left: 11.3%;
         padding-right: 11.3%;
         position: fixed;
-        top: 0;
         left: 0;
         right: 0;
         height: 95px;
         background-color: rgba(255, 255, 255, 0.808);
         z-index: 2;
-        backdrop-filter: blur(5px);
-        transition: height 1s ease;
+        backdrop-filter: blur(16px);
+        transition: top .8s ease;
+    }
+    .fixed {
+        top: 0;
     }
 }
 

@@ -21,16 +21,26 @@ import { FourReasons } from './Body/FourReasons';
 import { SectionTitle } from './Body/SectionTitle';
 import { FolderOffer } from './Body/FolderOffer';
 import { CookieWindow } from './CookieWindow';
+import { scroll } from '../hooks/scroll';
+import getCoords from '../modules/getCoords';
 
 export function App() {
+  const { scrollPos, windowHeight, windowWidth } = scroll();
+  const faceBlock = document.getElementById('faceBlock');
+
+  if (faceBlock) {
+    const divHeight = getCoords(faceBlock).bottom - getCoords(faceBlock).top;
+    windowHeight > divHeight ? faceBlock.style.height = `${windowHeight}px` : '';
+  }
+
   return (
     <Layout>
       <CookieWindow />
-      <div className={classNames(styles.backgroundHead, styles.paddingSides)}>
-        <img className={styles.backgroundHeadImg} src={backHead1} alt='bacground header' />
+      <div id='faceBlock' className={classNames(styles.backgroundHead, styles.paddingSides)}>
+        <img className={styles.backgroundHeadImg} src={backHead1} alt='bacground header' onContextMenu={()=>{return false}} />
         <div className={styles.inherit}>
           <div className={styles.header}>
-            <Header />
+            <Header scrollPos={scrollPos} />
           </div>
           <SectionTitle />
         </div>
@@ -44,9 +54,9 @@ export function App() {
         </div>
         <FourReasons />
         <h2 className={classNames(styles.sectionTitle, styles.sectionPadding)}>Спецпроекты</h2>
-        <FolderOffer />
+        <FolderOffer scrollPos={scrollPos} windowHeight={windowHeight} windowWidth={windowWidth} />
         <TenDaysOffer />
-        <Comments />
+        <Comments scrollPos={scrollPos} windowHeight={windowHeight} />
         <FAQ />
       </Body>
       <Footer />

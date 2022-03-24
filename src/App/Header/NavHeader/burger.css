@@ -18,8 +18,8 @@
     position: relative;
     display: inline-block;
     height: auto;
-    margin-top: 3px;
     margin: 0;
+    margin-top: 3px;
     padding: 0;
     color: inherit;
     background: 0 0;
@@ -184,6 +184,6 @@ button.container.open .burger span:last-child {
 
 @media (max-width: 768px) {
     .showMenu {
-        width: 70%;
+        width: 95%;
     }
 }

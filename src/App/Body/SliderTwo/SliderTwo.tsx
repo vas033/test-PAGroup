@@ -22,10 +22,11 @@ export default class SliderTwo extends React.Component {
       centerPadding: '22px',
       infinite: true,
       autoplay: true,
-      speed: 4000,
-      autoplaySpeed: 4000,
+      speed: 12000,
       variableWidth: true,
       cssEase: 'linear',
+      pauseOnHover: false,
+      pauseOnFocus: false,
       responsive: [
         {
           breakpoint: 767,
@@ -39,7 +40,7 @@ export default class SliderTwo extends React.Component {
       <Slider className={styles.slider} {...settings}>
         <div>
           <Image cl={styles.image} src={image1} alt={'slider image'} />
-          <Image cl={styles.image} src={image2} alt={'slider image'} />
+           <Image cl={styles.image} src={image2} alt={'slider image'} />
           <Image cl={styles.image} src={image3} alt={'slider image'} />
         </div>
         <div>

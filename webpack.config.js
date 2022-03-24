@@ -62,13 +62,14 @@ module.exports = {
                         },
                         {
                                 test: /\.(png|jpg|svg)$/i,
-                                use: {
-                                        loader: 'file-loader',
-                                        options: {
-                                                name: 'img/[name].[ext]',
-                                                output: path.resolve(__dirname, '/dist/img/')
-                                        }
-                                },
+                                type: 'asset'
+                                        // use: [{
+                                        //         loader: 'file-loader',
+                                        //         options: {
+                                        //                 name: 'img/[name].[ext]',
+                                        //                 output: path.resolve(__dirname, '/dist/img/')
+                                        //         }
+                                        // }]
                         }
                 ]
         },
@@ -77,7 +78,7 @@ module.exports = {
                 new CleanWebpackPlugin(),
                 new HtmlWebpackPlugin({
                         template: path.resolve(__dirname, '/index.html'),
-                        favicon: path.resolve(__dirname, 'src/img/logo.svg')
+                        favicon: path.resolve(__dirname, 'src/img/logo.svg'),
                 })
         ]
 }
