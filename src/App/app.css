@@ -55,14 +55,10 @@ button {
     letter-spacing: -0.01em;
 }
 
-
-/* .inherit {
-    padding-top: 168px;
-} */
-
 .orientCenter {
-    display: flex;
-    justify-content: center;
+    width: 214px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
 }
 
@@ -103,9 +99,9 @@ button {
         padding-left: 160px;
         padding-right: 160px;
     }
-    /* .inherit {
-        padding-top: 168px;
-    } */
+    .orientCenter {
+        width: 294px;
+    }
 }
 
 @media (min-width:1920px) {

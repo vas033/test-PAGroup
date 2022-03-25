@@ -18,7 +18,7 @@ function setupDevtool() {
 
 module.exports = {
         resolve: {
-                extensions: ['.js', '.jsx', '.ts', '.tsx', '.json']
+                extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
         },
         mode: NODE_ENV ? NODE_ENV : 'development',
         entry: [
@@ -31,7 +31,16 @@ module.exports = {
         module: {
                 rules: [{
                                 test: /\.[tj]sx?$/,
-                                use: ['ts-loader'],
+                                use: 'ts-loader'
+                                        // exclude: /node_modules/,
+                                        // use: ['babel-loader', {
+                                        //         options: {
+                                        //                 presets: [
+                                        //                         '@babel/preset-react'
+                                        //                 ],
+                                        //                 plugins: ['@babel/plugin-syntax-jsx']
+                                        //         }
+                                        // }],
                         },
                         {
                                 test: GLOBAL_CSS_REGEXP,
@@ -63,17 +72,13 @@ module.exports = {
                         {
                                 test: /\.(png|jpg|svg)$/i,
                                 type: 'asset'
-                                        // use: [{
-                                        //         loader: 'file-loader',
-                                        //         options: {
-                                        //                 name: 'img/[name].[ext]',
-                                        //                 output: path.resolve(__dirname, '/dist/img/')
-                                        //         }
-                                        // }]
                         }
                 ]
         },
         devtool: setupDevtool(),
+        devServer: {
+                historyApiFallback: true,
+        },
         plugins: [
                 new CleanWebpackPlugin(),
                 new HtmlWebpackPlugin({

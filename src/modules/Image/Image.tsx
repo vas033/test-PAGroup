@@ -4,14 +4,15 @@ import styles from './image.css';
 
 interface IImage {
   cl?: string;
+  clImg?: string;
   src: string;
   alt: string;
 }
 
-export function Image({cl, src, alt}:IImage) {
+export function Image({cl, src, alt, clImg}:IImage) {
   return (
     <div className={classNames(styles.img, cl)}>
-      <img  src={src} alt={alt} onContextMenu={() => {return false}} />
+      <img className={clImg} src={src} alt={alt} onContextMenu={() => {return false}} />
       <div className={styles.onImg}></div>
     </div>
   );

@@ -8,18 +8,20 @@ interface IBtn {
   a?: boolean;
   href?: string;
   header?: boolean;
+  bottomNav?: string;
 }
 
-export function Btn({ text, inverse = false, a = false, href, header = false }: IBtn) {
+export function Btn({ text, inverse = false, a = false, href, header = false, bottomNav }: IBtn) {
 
   let classes = '';
   let mainClass = '';
   inverse ? classes = styles.inverse : '';
   header ? mainClass = classNames(styles.button, styles.header) : mainClass = styles.button;
+  bottomNav ? mainClass = classNames(styles.button, bottomNav) : '';
 
   if (a) {
     return (
-      <a className={classNames(styles.button, styles.block, classes)} href={href} onClick={(e) => e.preventDefault}>
+      <a className={classNames(mainClass, styles.block, classes)} href={href} onClick={(e) => e.preventDefault}>
         <span className={styles.buttonTitle}>
           <span data-text={text}>{text}</span>
         </span>

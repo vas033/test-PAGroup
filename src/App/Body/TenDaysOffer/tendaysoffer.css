@@ -23,24 +23,13 @@
 }
 
 .containerImg {
-    display: flex;
-    height: 300px;
+    padding: 0px 23px;
+    text-align: center;
 }
 
-.first_line {
-    margin-bottom: 40px;
-}
-
-.image:not(:last-child) {
-    margin-right: 40px;
-}
-
-.firstLine {
-    left: 25%;
-}
-
-.secondLine {
-    left: 0;
+.image {
+    width: 100%;
+    max-width: 715px;
 }
 
 .padding25 {
@@ -101,8 +90,8 @@
         box-shadow: unset;
     }
     .item {
-        padding-bottom: 50px;
-        padding-top: 50px;
+        padding-bottom: 25px;
+        padding-top: 25px;
         flex: 0 0 50%;
         font-size: 20px;
     }
@@ -112,17 +101,19 @@
     .item:nth-last-child(2) {
         border: none
     }
-    .item:nth-child(-n+2) .textItemWidth {
-        width: 54%;
-    }
-    .item:nth-child(n+3) {
-        box-shadow: 0px 2px 0px 0px #9F92F5 inset;
-    }
     .btn {
-        width: fit-content;
+        width: 380px;
+        margin-top: 25px;
     }
-    .first_line {
-        margin-bottom: 40px;
+    .containerImg {
+        padding: 0px 50px;
+        margin-bottom: 12px;
+    }
+    .longTextDesc {
+        display: none;
+    }
+    .textItemWidth {
+        width: 63%;
     }
 }
 
@@ -133,7 +124,7 @@
         padding-bottom: auto;
     }
     .container {
-        padding: 50px 110px;
+        padding: 50px;
     }
     .title,
     .description {
@@ -144,21 +135,18 @@
         line-height: 130%;
     }
     .item {
+        flex: 0 0 25%;
         font-size: 28px;
         line-height: 140%;
-    }
-    .item:nth-child(-n+2) .textItemWidth,
-    .item:last-child .textItemWidth {
-        width: 100%;
-    }
-    .item:nth-last-child(2) .textItemWidth {
-        width: 76%
-    }
-    .item:nth-child(n+3) {
         padding-bottom: unset;
     }
+    .textItemWidth {
+        width: 83%
+    }
+    .item:nth-child(n+3) {
+        box-shadow: unset;
+    }
     .btn {
-        width: 28.5%;
         padding-top: 14px;
     }
 }
@@ -170,7 +158,7 @@
         padding-bottom: 0;
     }
     .container {
-        padding: 50px;
+        padding: 50px 105px;
     }
     .title,
     .description {
@@ -182,14 +170,13 @@
     .firstLine {
         left: 17%;
     }
-    .list {
-        width: 70%;
-        margin-left: 0;
-    }
     .item:last-child .textItemWidth {
         width: 95%
     }
     .btn {
         padding-top: 14px;
+    }
+    .textItemWidth {
+        width: 74%
     }
 }

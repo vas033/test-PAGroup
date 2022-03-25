@@ -2,10 +2,13 @@
     margin-bottom: 50px;
 }
 
+.imgStyle {
+    width: 100%;
+}
+
 .image {
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
     padding: 21.44px;
     margin-bottom: 21.44px;
     margin-right: 21.44px;

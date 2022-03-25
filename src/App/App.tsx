@@ -23,6 +23,7 @@ import { FolderOffer } from './Body/FolderOffer';
 import { CookieWindow } from './CookieWindow';
 import { scroll } from '../hooks/scroll';
 import getCoords from '../modules/getCoords';
+import { BottomMenu } from './BottomMenu';
 
 export function App() {
   const { scrollPos, windowHeight, windowWidth } = scroll();
@@ -36,6 +37,7 @@ export function App() {
   return (
     <Layout>
       <CookieWindow />
+      <BottomMenu scrollPos={scrollPos} />
       <div id='faceBlock' className={classNames(styles.backgroundHead, styles.paddingSides)}>
         <img className={styles.backgroundHeadImg} src={backHead1} alt='bacground header' onContextMenu={()=>{return false}} />
         <div className={styles.inherit}>
@@ -50,7 +52,7 @@ export function App() {
         <Offer />
         <SliderTwo />
         <div className={styles.orientCenter}>
-          <Btn text='смотреть на behance' a={true} href='#' />
+          <Btn text='смотреть на behance' a={true} href='https://www.behance.net/pa_group' />
         </div>
         <FourReasons />
         <h2 className={classNames(styles.sectionTitle, styles.sectionPadding)}>Спецпроекты</h2>

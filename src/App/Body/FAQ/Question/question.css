@@ -43,16 +43,17 @@
 
 .answer {
     margin-top: 15px;
+    padding-bottom: 50px;
     line-height: 160%;
-    height: 100%;
     opacity: 1;
     transition: all 0.2s linear;
 }
 
 .answer.hidden {
-    height: 0;
+    height: 0px;
     opacity: 0;
     margin-top: 0;
+    padding-bottom: 0;
 }
 
 @media (min-width:768px) {

@@ -39,25 +39,25 @@ export default class SliderTwo extends React.Component {
     return (
       <Slider className={styles.slider} {...settings}>
         <div>
-          <Image cl={styles.image} src={image1} alt={'slider image'} />
-           <Image cl={styles.image} src={image2} alt={'slider image'} />
-          <Image cl={styles.image} src={image3} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image1} alt={'slider image'} />
+           <Image clImg={styles.imgStyle} cl={styles.image} src={image2} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image3} alt={'slider image'} />
         </div>
         <div>
-          <Image cl={styles.image} src={image4} alt={'slider image'} />
-          <Image cl={styles.image} src={image5} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image4} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image5} alt={'slider image'} />
         </div>
         <div>
-          <Image cl={styles.image} src={image6} alt={'slider image'} />
-          <Image cl={styles.image} src={image7} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image6} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image7} alt={'slider image'} />
         </div>
         <div>
-          <Image cl={styles.image} src={image8} alt={'slider image'} />
-          <Image cl={styles.image} src={image9} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image8} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image9} alt={'slider image'} />
         </div>
         <div>
-          <Image cl={styles.image} src={image10} alt={'slider image'} />
-          <Image cl={styles.image} src={image11} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image10} alt={'slider image'} />
+          <Image clImg={styles.imgStyle} cl={styles.image} src={image11} alt={'slider image'} />
         </div>
       </Slider>
     );

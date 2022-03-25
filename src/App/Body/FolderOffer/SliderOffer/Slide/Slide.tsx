@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Btn } from '../../../../../modules/Btn';
 import classNames from '../../../../../modules/className';
 import { TextDiv } from '../../../../../modules/TextDiv';
@@ -25,21 +25,25 @@ export function Slide(props: IMySlide) {
   if (props.windowWidth && props.windowWidth < 768) {
     const card = document.getElementById(id);
   
-    if (card && props.scrollPos) {
+    if (card ) {
       const topCard = getCoords(card).top;
       const bottomCard = getCoords(card).bottom;
+      let cardList = document.querySelectorAll(`.${styles.slide}`);
+      cardList.forEach((el) => {
+        if(props.scrollPos) {
+          if (props.scrollPos >= topCard - 30 ) {
+            el.classList.add(styles.cardAnim);
+          } else if (props.scrollPos < topCard -30 || props.scrollPos > bottomCard) {
+            el.classList.remove(styles.cardAnim);
+          }
+        }
+      })
   
-      if (props.scrollPos >= topCard - 30) {
-        card.classList.add(styles.cardAnim);
-      } else if (props.scrollPos < topCard -30 || props.scrollPos > bottomCard) {
-        card.classList.remove(styles.cardAnim);
-      }
     }
   }
 
-
   return (
-    <div id={id} className={classNames(styles.slide, props.cl)}>
+    <div id={id} className={classNames(styles.slide, props.cl)} >
       <div className={classNames(styles.flex33, styles.borderBottom)}>
         <TextDiv
           title={props.title}
@@ -73,7 +77,7 @@ export function Slide(props: IMySlide) {
           {props.offer.map((el, index) => <List cl={styles.listItem} item={el} key={index} />)}
         </ul>
         <div className={styles.btnContainer}>
-          <Btn text='хочу написать' />
+          <Btn text='хочу написать' a={true} href='https://pa-support.bitrix24.site/' />
         </div>
       </div>
     </div>

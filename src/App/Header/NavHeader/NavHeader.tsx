@@ -6,7 +6,6 @@ import burger from './burger.css';
 
 export function NavHeader() {
   function onClick() {
-    console.log('click')
     const btn = document.getElementById('burger');
     const menu = document.getElementById('menu');
     btn ? btn.classList.toggle(burger.open) : '';

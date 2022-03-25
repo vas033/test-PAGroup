@@ -34,6 +34,10 @@
 
 .hiddenLinkContainer {
     margin-bottom: 80px;
+}
+
+.hiddenLinkContainer,
+.linkContainer {
     width: fit-content;
     overflow: hidden;
 }
@@ -79,7 +83,6 @@
 .mail {
     padding-bottom: 8px;
     display: block;
-    /* border-bottom: 2px solid rgba(152, 150, 168, 0.5); */
     font-family: 'Visby Semibold';
     font-size: 24px;
 }

@@ -42,12 +42,12 @@ export function Footer() {
       <div id='footerContent' className={classNames(styles.container, styles.flexColumn)}>
         <h2 className={styles.title}>Сделаем уже что-нибудь?</h2>
         <div className={styles.hiddenLinkContainer}>
-          <a className={styles.hiddenLink} href="mailto:dsgn@pagroup.ru">Давайте начнём</a>
+          <a className={styles.hiddenLink} href="https://pa-support.bitrix24.site/">Давайте начнём</a>
           <div className={styles.hiddenLinkBorder}></div>
         </div>
         <div className={styles.infoNav}>
           <div className={styles.infoContainer}>
-            <div className={styles.hiddenLinkContainer}>
+            <div className={styles.linkContainer}>
               <a className={styles.mail} href="mailto:dsgn@pagroup.ru">dsgn@pagroup.ru</a>
               <div className={styles.hiddenLinkBorder}></div>
             </div>

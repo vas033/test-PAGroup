@@ -11,18 +11,19 @@
 
 button,
 a {
-    font-family: 'Visby Medium Italic';
     font-size: 16px;
     line-height: 150%;
 }
 
 .button {
+    width: -webkit-fill-available;
     position: relative;
     padding: 16px 23px;
     color: #3E24EA;
     background-color: #fff;
     border-radius: 150px;
     border: 1px solid #3E24EA;
+    font-family: 'Visby Medium Italic';
     text-align: center;
     transition: color 1s;
     overflow: hidden;

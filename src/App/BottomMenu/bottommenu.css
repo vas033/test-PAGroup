@@ -1,0 +1,36 @@
+.container {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .container {
+        display: block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transform: translateY(100%);
+        transition: transform .5s linear;
+        z-index: 2;
+    }
+    .nav {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px 24px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        background-color: #3e24ea2b;
+        backdrop-filter: blur(10px);
+        border: 1px solid white;
+        border-radius: 50px;
+    }
+    .link {
+        width: fit-content;
+        background-color: unset;
+        border: unset;
+    }
+    .link:not(:last-child) {
+        margin-right: 10px;
+    }
+}

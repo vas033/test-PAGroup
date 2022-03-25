@@ -10,7 +10,7 @@ const Root = () => {
                         <App />
                 </React.Fragment>
         )
-}
+};
 
 window.addEventListener('load', () => {
         ReactDOM.render(<Root />, document.getElementById('react-app'));
