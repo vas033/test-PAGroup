@@ -43,6 +43,7 @@
 
 .item {
     display: block;
+    font-family: 'Visby Bold';
     font-size: 18px;
     line-height: 150%;
     letter-spacing: -0.01em;
@@ -87,15 +88,17 @@
         justify-content: flex-start;
     }
     .item:not(:first-child) {
-        box-shadow: unset;
+        box-shadow: none;
     }
     .item {
         padding-bottom: 25px;
         padding-top: 25px;
         flex: 0 0 50%;
-        font-size: 20px;
+        font-size: 24px;
+        letter-spacing: unset;
     }
     .item:nth-child(-n+2) {
+        padding-top: 7px;
         padding-right: 0;
     }
     .item:nth-last-child(2) {
@@ -105,15 +108,18 @@
         width: 380px;
         margin-top: 25px;
     }
+    .btn a {
+        font-size: 21px;
+        line-height: 152%;
+    }
     .containerImg {
         padding: 0px 50px;
-        margin-bottom: 12px;
     }
     .longTextDesc {
         display: none;
     }
     .textItemWidth {
-        width: 63%;
+        width: 73%;
     }
 }
 
@@ -134,20 +140,28 @@
         font-size: 60px;
         line-height: 130%;
     }
+    .list {
+        padding-top: 0;
+        padding-bottom: 11px;
+    }
     .item {
         flex: 0 0 25%;
-        font-size: 28px;
-        line-height: 140%;
         padding-bottom: unset;
+        box-shadow: 0px -2px 0px 0px #FFFFFF33 !important;
+    }
+    .item:nth-child(-n+2),
+    .item {
+        padding-top: 32px;
     }
     .textItemWidth {
         width: 83%
     }
-    .item:nth-child(n+3) {
-        box-shadow: unset;
-    }
     .btn {
         padding-top: 14px;
+        padding-bottom: 0;
+    }
+    .description {
+        margin-bottom: 21px;
     }
 }
 
@@ -170,13 +184,21 @@
     .firstLine {
         left: 17%;
     }
+    .list {
+        padding-top: 0;
+        padding-bottom: 11px;
+    }
     .item:last-child .textItemWidth {
         width: 95%
+    }
+    .item:nth-child(-n+2),
+    .item {
+        padding-top: 34px;
     }
     .btn {
         padding-top: 14px;
     }
     .textItemWidth {
-        width: 74%
+        width: 67%
     }
 }

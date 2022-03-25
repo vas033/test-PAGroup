@@ -125,10 +125,6 @@
     justify-content: start;
 }
 
-.btnContainer button {
-    width: 100%;
-}
-
 @media (min-width:768px) {
     .btnContainer button {
         padding-top: 30px;
@@ -145,6 +141,10 @@
     }
     .price {
         font-size: 32px;
+    }
+    .btnContainer a {
+        font-size: 21px;
+        line-height: 152%;
     }
 }
 

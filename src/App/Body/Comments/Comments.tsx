@@ -4,6 +4,7 @@ import styles from './comments.css';
 import { Comment } from './Comment'
 import { Btn } from '../../../modules/Btn';
 import { generateRandomString } from '../../../modules/generateId';
+import { RouterLink } from '../../../modules/RouterLink';
 
 interface IMyProp {
   scrollPos?: number;
@@ -24,7 +25,7 @@ export function Comments({scrollPos, windowHeight}:IMyProp) {
         <Comment cl={styles.comment} src={comments[2].src} name={comments[2].name} link={comments[2].link} text={comments[2].text} scrollPos={scrollPos} windowHeight={windowHeight} id={id2} />
       </div>
       <div className={styles.btn}>
-        <Btn text='посмотреть все отзывы' />
+        <RouterLink text='посмотреть все отзывы' href='/comments' />
       </div>
     </section>
   );

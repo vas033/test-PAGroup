@@ -29,7 +29,6 @@ export function Comment({ src, name, link, text, cl, scrollPos, windowHeight, id
   }
 
   return (
-    // <ScrollAnimation animateIn='bounceInRight' duration={2} animateOnce={true} >
     <div id={id} className={classNames(styles.commentContainer, cl)}>
       <div className={styles.flex}>
         <img src={src} alt="User photo" className={styles.photo} />
@@ -40,6 +39,5 @@ export function Comment({ src, name, link, text, cl, scrollPos, windowHeight, id
       </div>
       <p className={styles.text}>{text}</p>
     </div>
-    // </ScrollAnimation>
   );
 }

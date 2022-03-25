@@ -1,7 +1,6 @@
 .questionContainer {
     padding-top: 50px;
     padding-bottom: 50px;
-    /* border-bottom: 1px solid #DDDCE7; */
 }
 
 .questionContainer:not(:first-child) {
@@ -43,14 +42,14 @@
 
 .answer {
     margin-top: 15px;
-    padding-bottom: 50px;
+    max-height: 300px;
     line-height: 160%;
     opacity: 1;
     transition: all 0.2s linear;
 }
 
 .answer.hidden {
-    height: 0px;
+    max-height: 0px;
     opacity: 0;
     margin-top: 0;
     padding-bottom: 0;

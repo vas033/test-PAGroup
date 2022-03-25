@@ -1,0 +1,68 @@
+.container {
+    padding: 100px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    align-self: baseline;
+    font-family: 'Visby Regular';
+    font-size: 32px;
+    letter-spacing: -0.01em;
+}
+
+.back {
+    margin-right: auto;
+}
+
+.commentContainer .comment {
+    box-shadow: 0px -2px 0px #DDDCE7;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+@media(min-width: 768px) {
+    .container {
+        padding: 100px 64px;
+    }
+    .title {
+        font-size: 56px;
+        line-height: 108%;
+    }
+    .btn {
+        margin-top: 50px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        padding: 100px 110px;
+    }
+    .title {
+        font-size: 80px;
+        margin-bottom: 100px;
+    }
+    .btn {
+        margin-top: 100px;
+    }
+    .btn button {
+        padding-top: 29px;
+        padding-bottom: 29px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        padding: 100px 208px;
+    }
+    .title {
+        font-size: 120px;
+    }
+}

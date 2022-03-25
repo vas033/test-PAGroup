@@ -9,9 +9,10 @@ interface IBtn {
   href?: string;
   header?: boolean;
   bottomNav?: string;
+  handler?: () => void;
 }
 
-export function Btn({ text, inverse = false, a = false, href, header = false, bottomNav }: IBtn) {
+export function Btn({ text, inverse = false, a = false, href, header = false, bottomNav, handler = () => { } }: IBtn) {
 
   let classes = '';
   let mainClass = '';
@@ -33,7 +34,7 @@ export function Btn({ text, inverse = false, a = false, href, header = false, bo
   }
 
   return (
-    <button className={classNames(mainClass, classes)} onClick={(e) => e.preventDefault}>
+    <button className={classNames(mainClass, classes)} onClick={handler}>
       <span className={styles.buttonTitle}>
         <span data-text={text}>{text}</span>
       </span>
