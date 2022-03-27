@@ -16,17 +16,13 @@ export function Header({ scrollPos, windowHeight, windowWidth }: IMyProps) {
   
   let header = styles.header;
   if (scrollPos) {
-
     if (window.innerWidth >= 1440) {
-      if (scrollPos > 20) {
+      if (scrollPos > 80) {
         header = styles.header + ' ' + styles.hide;
-      } else {
-        header = styles.header + ' ' + styles.fixed;
-      }
-
+      } 
 
       if (header.includes(styles.hide)) {
-        scrollPos < currentPosition && scrollPos > 25 ? header = styles.header + ' ' + styles.fixed : header = styles.header + ' ' + styles.hide;
+        scrollPos < currentPosition && scrollPos > 80 ? header = styles.header + ' ' + styles.fixed : header = styles.header + ' ' + styles.hide;
         currentPosition = scrollPos;
       };
     };

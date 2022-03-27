@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import classNames from '../../../modules/className';
-import navHeader from '../../arrays/navHeader';
 import styles from './navheader.css';
 import burger from './burger.css';
+import navList from '../../arrays/navList';
 
 export function NavHeader() {
   function onClick() {
@@ -31,8 +31,8 @@ export function NavHeader() {
         <div className={burger.hiddenMenu} id='menu'>
           <div className={burger.menu}>
             <nav className={styles.nav}>
-              {navHeader.map(el => 
-                  <a className={styles.navLink} href={el.link} key={navHeader.indexOf(el)} >
+              {navList.map(el => 
+                  <a className={styles.navLink} href={el.link} key={navList.indexOf(el)} onClick={() => onClick()}>
                     <span className={styles.navSpan}>{el.name}</span>
                     <span className={classNames(styles.navSpan, styles.navBorder)}></span>
                     </a>                  
@@ -72,11 +72,11 @@ export function NavHeader() {
     return (
       <div className={styles.navigationDiv}>
         <nav className={styles.nav}>
-          {navHeader.map(el => 
-                  <a className={styles.navLink} href={el.link} key={navHeader.indexOf(el)} >
+          {navList.map(el => 
+                  <a className={styles.navLink} href={el.link} key={navList.indexOf(el)} onClick={() => onClick()} >
                     <span className={styles.navSpan}>{el.name}</span>
                     <span className={classNames(styles.navSpan, styles.navBorder)}></span>
-                    </a>                  
+                  </a>                  
               )}
         </nav>
         <div>

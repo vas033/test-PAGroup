@@ -48,6 +48,15 @@
     font-family: 'Visby Light';
 }
 
+.navLinks span {
+    width: fit-content
+}
+
+.navLinks span,
+span.hiddenLinkBorder {
+    display: block;
+}
+
 .hiddenLinkBorder {
     border: 1px solid rgba(152, 150, 168, 0.5);
     transition: border-color .2s ease;
@@ -61,18 +70,6 @@
     left: 0;
     transform: translateX(-100%);
     transition: transform .3s ease;
-}
-
-.mail:hover+.hiddenLinkBorder,
-.hiddenLink:hover+.hiddenLinkBorder {
-    border: none;
-}
-
-.mail:hover+.hiddenLinkBorder:before,
-.hiddenLink:hover+.hiddenLinkBorder:before {
-    display: block;
-    border: 1px solid white;
-    transform: translateX(0);
 }
 
 .infoContainer,
@@ -145,14 +142,16 @@
     .firmInfo:first-child {
         margin-right: 32px;
     }
+    .infoNav {
+        width: 100%;
+    }
     .nav {
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
         text-align: start;
     }
     .navLinks {
-        flex: 0 0 30%;
+        flex: 0 0 31%;
         line-height: 240%;
         letter-spacing: unset;
     }
@@ -161,6 +160,9 @@
     }
     .navLinks:nth-child(-n+3) {
         margin-bottom: 25px;
+    }
+    .navLinks:nth-child(3n+1) {
+        margin-right: 25px;
     }
     .lisence {
         font-size: 20px;
@@ -188,7 +190,17 @@
         justify-content: space-between;
     }
     .infoContainer {
-        width: 50%
+        width: 40%
+    }
+    .mail:hover+.hiddenLinkBorder,
+    .hiddenLink:hover+.hiddenLinkBorder {
+        border: none;
+    }
+    .mail:hover+.hiddenLinkBorder:before,
+    .hiddenLink:hover+.hiddenLinkBorder:before {
+        display: block;
+        border: 1px solid white;
+        transform: translateX(0);
     }
 }
 
@@ -197,6 +209,6 @@
         padding: 273px 208px 100px 208px;
     }
     .infoNav {
-        width: 80%;
+        width: 90%;
     }
 }

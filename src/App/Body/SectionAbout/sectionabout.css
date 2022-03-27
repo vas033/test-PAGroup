@@ -9,6 +9,10 @@
     margin-bottom: 32px;
 }
 
+.section2Div p {
+    width: 85%;
+}
+
 .section2Title {
     margin-bottom: 8px;
     color: #3E24EA;
@@ -32,6 +36,9 @@
 @media (min-width:1440px) {
     .section2Title {
         font-size: 24px;
+    }
+    .section2Div p {
+        width: 100%;
     }
 }
 

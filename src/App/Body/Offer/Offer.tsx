@@ -4,7 +4,7 @@ import styles from './offer.css';
 
 export function Offer() {
   return (
-    <section className={classNames(styles.sectionPadding, styles.offer)}>
+    <section id='Offer' className={classNames(styles.sectionPadding, styles.offer)}>
       <h2 className={styles.sectionTitle}>Что мы предлагаем</h2>
       <div className={styles.listTablet}>
         <h3 className={styles.subTitleGrey}> UX/UI </h3>

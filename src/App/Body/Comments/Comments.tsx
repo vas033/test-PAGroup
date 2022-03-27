@@ -17,16 +17,16 @@ const id2 = generateRandomString();
 
 export function Comments({scrollPos, windowHeight}:IMyProp) {
   return (
-    <section className={styles.container}>
+    <section id='Comments' className={styles.container}>
       <h2 className={styles.title}>Отзывы</h2>
       <div className={styles.commentContainer}>
         <Comment src={comments[0].src} name={comments[0].name} link={comments[0].link} text={comments[0].text} scrollPos={scrollPos} windowHeight={windowHeight} id={id0} />
         <Comment cl={styles.comment} src={comments[1].src} name={comments[1].name} link={comments[1].link} text={comments[1].text} scrollPos={scrollPos} windowHeight={windowHeight} id={id1} />
         <Comment cl={styles.comment} src={comments[2].src} name={comments[2].name} link={comments[2].link} text={comments[2].text} scrollPos={scrollPos} windowHeight={windowHeight} id={id2} />
       </div>
-      <div className={styles.btn}>
+      {/* <div className={styles.btn}>
         <RouterLink text='посмотреть все отзывы' href='/comments' />
-      </div>
+      </div> */}
     </section>
   );
 }

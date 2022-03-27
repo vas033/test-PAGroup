@@ -9,18 +9,23 @@ export function SectionAbout() {
   const [works, setWorks] = useState(0);
   const [designers, setDesigners] = useState(0);
 
-  async function inputTime (numFinish:number, number:number, fn: React.Dispatch<React.SetStateAction<number>>) {
-    number === numFinish ? clearTimeout(time) : time = setTimeout(() => animNumber( numFinish, number, fn), 300);   
+  const animTime = 2000;
+
+  async function inputTime ( constName:any, numFinish:number, number:number, fn: React.Dispatch<React.SetStateAction<number>>, ms:number) {
+    number === numFinish ? clearTimeout(constName) : constName = setTimeout(() => animNumber( numFinish, number, fn), ms);   
   };
 
   const animNumber = (num:number, number: number, fn: React.Dispatch<React.SetStateAction<number>>) => {
-    const step = Math.floor(num / 10);
-    number + step > num ? fn(num) : fn(number + step);
+    number > num ? fn(num) : fn(++number);
   } 
 
-  inputTime(40, clients, setClients);
-  inputTime(690, works, setWorks);
-  inputTime(16, designers, setDesigners);
+  let clientsTime;
+  let worksTime;
+  let designersTime;
+
+  inputTime(clientsTime, 40, clients, setClients, animTime/40);
+  inputTime(worksTime, 690, works, setWorks, animTime/690);
+  inputTime(designersTime, 16, designers, setDesigners, animTime/16);
 
   return (
     <div className={styles.section2}>

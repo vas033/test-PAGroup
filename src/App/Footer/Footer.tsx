@@ -57,8 +57,8 @@ export function Footer() {
             </div>
           </div>
           <nav className={classNames(styles.flexColumn, styles.nav)}>
-            {navList.map(el =>
-              <a className={styles.navLinks} key={navList.indexOf(el)} href={el.link}>{el.name}</a>
+            {navList.map((el) =>
+                <a className={styles.navLinks} key={navList.indexOf(el)} href={el.link}>{el.name}</a>
             )}
           </nav>
         </div>

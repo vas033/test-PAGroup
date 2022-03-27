@@ -1,4 +1,5 @@
 .navigationDiv {
+    margin-top: 12px;
     display: none;
     flex: 0 -1 68%;
     font-size: 16px;
@@ -11,18 +12,14 @@
 
 .navSpan {
     display: block;
-    padding-bottom: 5px;
 }
 
 .navBorder {
+    padding-top: 5px;
     padding-bottom: unset;
     transform: translateX(-100%);
     border-bottom: 2px solid black;
-    transition: transform .3s ease;
-}
-
-.navLink:hover .navBorder {
-    transform: translateX(0%);
+    transition: all .3s ease;
 }
 
 .langBtn {
@@ -54,5 +51,11 @@
     .navLink {
         font-family: 'Visby Medium';
         line-height: 160%;
+    }
+}
+
+@media(min-width:1440px) {
+    .navLink:hover .navBorder {
+        transform: translateX(0%);
     }
 }

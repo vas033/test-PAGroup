@@ -75,11 +75,14 @@ button.container.open .burger span:last-child {
 }
 
 .menu {
+    margin-left: auto;
+    width: 80%;
     padding: 5%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    background-color: white;
 }
 
 .hiddenMenu {
@@ -89,12 +92,12 @@ button.container.open .burger span:last-child {
     right: 0;
     bottom: 0;
     opacity: 0;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.411);
     transition: all .2s linear;
 }
 
 .showMenu {
-    width: 30%;
+    width: 100%;
     opacity: 1;
     transition: all .2s linear;
 }
@@ -183,7 +186,11 @@ button.container.open .burger span:last-child {
 }
 
 @media (max-width: 768px) {
-    .showMenu {
-        width: 95%;
+    .showMenu {}
+}
+
+@media (min-width:768px) {
+    .menu {
+        width: 30%
     }
 }

@@ -1,7 +1,5 @@
 import React from 'react';
-import { Btn } from '../../modules/Btn';
 import classNames from '../../modules/className';
-import { List } from '../../modules/List';
 import navHeader from '../arrays/navHeader';
 import styles from './bottommenu.css';
 interface IBottomMenu {
@@ -13,7 +11,7 @@ export function BottomMenu({ scrollPos }: IBottomMenu) {
   const menu = document.getElementById('bottomMenu');
 
   if (menu && scrollPos > 50) {
-    menu.style.transform = 'translateY(0%)';
+    menu.style.transform = 'translateY(-30%)';
   } else if (menu && scrollPos < 50) {
     menu.style.transform = 'translateY(100%)';
   }

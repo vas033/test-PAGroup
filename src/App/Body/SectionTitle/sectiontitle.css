@@ -50,16 +50,26 @@
     }
     .text {
         margin-left: 35%;
-        width: 42%;
+        width: 43%;
         line-height: 160%;
     }
     .sectionAbout {
         flex: 0 0 65%;
+    }
+    div a {
+        line-height: 114%;
     }
 }
 
 @media (min-width: 1920px) {
     .title {
         font-size: 120px;
+    }
+    .sectionAbout {
+        flex: 0 0 55%;
+    }
+    .text {
+        margin-left: 45%;
+        width: 32%;
     }
 }

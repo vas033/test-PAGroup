@@ -64,10 +64,6 @@
     line-height: 160%;
 }
 
-.pWidth {
-    width: 60%;
-}
-
 .sectionTitle {
     margin-bottom: 48px;
     font-family: 'Visby Regular';
@@ -78,10 +74,6 @@
 
 .marginBottom30 {
     margin-bottom: 30px;
-}
-
-.paddingSides69 {
-    padding: 0px 69px;
 }
 
 .offerContainer {
@@ -158,7 +150,7 @@
 
 @media (min-width: 1440px) {
     .sectionPadding {
-        margin: 50px 50px 0 50px;
+        margin: 0px 50px 0 50px;
         padding: 50px 110px;
     }
     .sectionTitle {
@@ -173,9 +165,10 @@
     }
     .sectionSpecContent {
         flex-wrap: nowrap;
+        justify-content: space-between;
     }
     .flex {
-        flex: 0 0 20%;
+        flex: 0 0 21%;
         margin-bottom: 16px;
     }
     .bold {
@@ -203,7 +196,8 @@
         align-items: center;
     }
     .sectionSpecContent {
-        flex-wrap: nowrap;
+        padding-left: 50px;
+        padding-right: 50px;
     }
     .flex {
         flex: 0 0 20%;

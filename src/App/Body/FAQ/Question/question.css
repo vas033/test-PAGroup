@@ -35,6 +35,10 @@
     transition: transform .5s;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btn.rotate {
     transform: rotate(180deg);
     transition: transform .5s;

@@ -1,27 +1,22 @@
 const navList = [
         {
-                name: 'Креативная студия',
-                link: '#'
+                name: 'Что мы предлагаем',
+                link: '#Offer'
         },
         {
-                name: 'Meta студия',
-                link: '#'
+                name: 'Спецпроекты',
+                link: '#SpecProject'
         },
         {
-                name: 'SMM агенство',
-                link: '#'
+                name: 'Отзывы',
+                link: '#Comments'
         },
         {
-                name: 'Работа у нас',
-                link: '#'
-        },
-        {
-                name: 'Разработка',
-                link: '#'
-        },
-        {
-                name: 'Behance',
-                link: '#'
+                name: 'ЧаВо',
+                link: '#FAQ'
+        },{
+                name: 'Оставить заявку',
+                link: '#footer'
         },
 ]
 

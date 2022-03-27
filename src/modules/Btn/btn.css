@@ -113,23 +113,20 @@ a {
     transition: transform .5s cubic-bezier(.4, 0, 0, 1), border-radius .5s cubic-bezier(.4, 0, 0, 1);
 }
 
-.button:hover .buttonTitle span {
-    color: #fff;
-    transform: translateY(-150%) skewY(-7deg);
-}
-
-.button:hover .buttonTitle span:after {
-    transform: skewY(7deg);
-}
-
-.button:hover .buttonRipple span {
-    border-radius: 0;
-    transform: translateY(0);
-    transition-duration: 0s, 0s;
-    animation: buttonAnimation .5s cubic-bezier(.4, 0, 0, 1);
-}
-
 @media (min-width: 1440px) {
+    .button:hover .buttonTitle span {
+        color: #fff;
+        transform: translateY(-150%) skewY(-7deg);
+    }
+    .button:hover .buttonTitle span:after {
+        transform: skewY(7deg);
+    }
+    .button:hover .buttonRipple span {
+        border-radius: 0;
+        transform: translateY(0);
+        transition-duration: 0s, 0s;
+        animation: buttonAnimation .5s cubic-bezier(.4, 0, 0, 1);
+    }
     .button,
     .inverse {
         padding: 25px 32px;

@@ -37,7 +37,7 @@ export function App() {
   return (
     <Layout>
       <CookieWindow />
-      <BottomMenu scrollPos={scrollPos} />
+      {/* <BottomMenu scrollPos={scrollPos} /> */}
       <div id='faceBlock' className={classNames(styles.backgroundHead, styles.paddingSides)}>
         <img className={styles.backgroundHeadImg} src={backHead1} alt='bacground header' onContextMenu={()=>{return false}} />
         <div className={styles.inherit}>
@@ -55,7 +55,7 @@ export function App() {
           <Btn text='смотреть на behance' a={true} href='https://www.behance.net/pa_group' />
         </div>
         <FourReasons />
-        <h2 className={classNames(styles.sectionTitle, styles.sectionPadding)}>Спецпроекты</h2>
+        <h2 id='SpecProject' className={classNames(styles.sectionTitle, styles.sectionPadding)}>Спецпроекты</h2>
         <FolderOffer scrollPos={scrollPos} windowHeight={windowHeight} windowWidth={windowWidth} />
         <TenDaysOffer />
         <Comments scrollPos={scrollPos} windowHeight={windowHeight} />

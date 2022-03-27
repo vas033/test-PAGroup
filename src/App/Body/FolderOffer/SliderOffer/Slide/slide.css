@@ -98,7 +98,10 @@
 
 .ui {
     margin: 0;
-    padding-left: 36px;
+}
+
+.ui li {
+    margin-left: 36px;
 }
 
 .flex25,

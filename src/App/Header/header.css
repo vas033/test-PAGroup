@@ -5,20 +5,21 @@
     align-items: center;
     position: absolute;
     top: 0;
-    left: 11.3%;
+    left: 6%;
     right: 11.3%;
     overflow: hidden;
+    transition: all .8s ease;
 }
 
 @media (max-width: 767px) {
     .header {
-        justify-content: center;
         margin-bottom: 105px;
     }
 }
 
 @media (min-width: 767px) {
     .header {
+        left: 8%;
         justify-content: space-between;
     }
 }
@@ -26,13 +27,14 @@
 @media (min-width: 1440px) {
     .header {
         margin-bottom: 100px;
+        left: 11.3%;
         opacity: 1;
     }
     .hide {
         top: -100%;
+        transition: top .8s ease;
     }
-    .fixed,
-    .hide {
+    .fixed {
         margin: 0;
         padding-left: 11.3%;
         padding-right: 11.3%;
@@ -40,10 +42,8 @@
         left: 0;
         right: 0;
         height: 95px;
-        background-color: rgba(255, 255, 255, 0.808);
+        background-color: white;
         z-index: 2;
-        backdrop-filter: blur(16px);
-        transition: top .8s ease;
     }
     .fixed {
         top: 0;
@@ -52,7 +52,12 @@
 
 @media (min-width: 1920px) {
     .header {
+        left: 10.8%;
         margin-bottom: 86px;
         opacity: 1;
+    }
+    .fixed {
+        left: 0;
+        padding-left: 10.8%;
     }
 }

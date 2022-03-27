@@ -1,19 +1,24 @@
 .container {
-    padding: 10px 24px;
-    position: fixed;
-    left: 5%;
-    bottom: 5%;
-    background-color: #3E24EA;
-    border-radius: 50px;
-    z-index: 3;
+    display: none;
 }
 
-.desc {
-    margin-right: 15px;
-    color: white;
-}
-
-.desc,
-.btn {
-    display: inline-block;
+@media (min-width:1440px) {
+    .container {
+        display: block;
+        padding: 10px 24px;
+        position: fixed;
+        left: 40px;
+        bottom: 40px;
+        background-color: #3E24EA;
+        border-radius: 50px;
+        z-index: 3;
+    }
+    .desc {
+        margin-right: 15px;
+        color: white;
+    }
+    .desc,
+    .btn {
+        display: inline-block;
+    }
 }
