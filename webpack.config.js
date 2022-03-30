@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { default: Slider } = require('react-slick');
 const { webpack } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const metaImg = require('./src/img/meta.png')
 
 const NODE_ENV = process.env.NODE_ENV;
 const GLOBAL_CSS_REGEXP = /\.global\.css$/;
@@ -76,7 +75,7 @@ module.exports = {
                 new CleanWebpackPlugin(),
                 new HtmlWebpackPlugin({
                         template: path.resolve(__dirname, '/index.html'),
-                        favicon: path.resolve(__dirname, 'src/img/logo.svg'),
+                        favicon: path.resolve(__dirname, 'src/img/a.svg'),
                 })
         ]
 }

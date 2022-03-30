@@ -17,7 +17,7 @@ export function SectionTitle() {
       />
       <div className={styles.bottomDiv}>
         <div style={{width: 'fit-content'}}>
-          <Btn text="заказать дизайн" header={true} a={true} href='https://pa-support.bitrix24.site/' />
+          <Btn text="заказать дизайн" header={true} a={true} href='https://pa-sales.bitrix24.site/' />
         </div>
         <div className={styles.sectionAbout}>
           <SectionAbout />

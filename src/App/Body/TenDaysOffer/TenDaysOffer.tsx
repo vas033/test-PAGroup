@@ -28,7 +28,7 @@ export function TenDaysOffer() {
         {tenDaysOffer.map((el) => <List cl={classNames(styles.padding25, styles.item)} clLi={styles.textItemWidth} item={el.title} longText={true} clLongTextPart={styles.longTextDesc} longTextPart={el.desc} key={tenDaysOffer.indexOf(el)} />)}
       </ul>
       <div className={classNames(styles.container, styles.padding25, styles.btn)}>
-        <Btn text='хочу крутой инфо сайт' inverse={true} a={true} href='https://pa-support.bitrix24.site/' />
+        <Btn text='хочу крутой инфо сайт' inverse={true} a={true} href='https://pa-sales.bitrix24.site/' />
       </div>
     </div>
   );

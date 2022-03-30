@@ -77,7 +77,7 @@ export function Slide(props: IMySlide) {
           {props.offer.map((el, index) => <List cl={styles.listItem} item={el} key={index} />)}
         </ul>
         <div className={styles.btnContainer}>
-          <Btn text='хочу написать' a={true} href='https://pa-support.bitrix24.site/' />
+          <Btn text='хочу написать' a={true} href='https://pa-sales.bitrix24.site/' />
         </div>
       </div>
     </div>

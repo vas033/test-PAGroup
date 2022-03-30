@@ -3,7 +3,7 @@
         stroke-dashoffset: 0
     }
     50% {
-        stroke-dashoffset: 172
+        stroke-dashoffset: 500%
     }
     100% {
         stroke-dashoffset: 0
