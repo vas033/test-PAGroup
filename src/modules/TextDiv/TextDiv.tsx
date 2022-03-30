@@ -10,6 +10,7 @@ interface ITextDiv {
   tag?: string;
   cl?: string;
   clTitle?: string;
+  clSubTitle?: string;
   clText?: string;
   img?: boolean;
   alt?: string;
@@ -17,7 +18,7 @@ interface ITextDiv {
   clImg?: string;
 }
 
-export function TextDiv({ title, titleBold, text, tag, cl, clTitle, clText, img, src, alt, clImg }: ITextDiv) {
+export function TextDiv({ title, titleBold, text, tag, cl, clTitle, clText, img, src, alt, clImg, clSubTitle }: ITextDiv) {
   if (tag === 'h1') {
     return (
       <div className={classNames(styles.textContainer, cl)}>
@@ -36,7 +37,7 @@ export function TextDiv({ title, titleBold, text, tag, cl, clTitle, clText, img,
     return (
       <div className={classNames(styles.textContainer, cl)}>
         <h2 className={classNames(styles.title, clTitle)}>
-          {title}<strong className={clTitle}>{titleBold}</strong></h2>
+          {title}<strong className={ clSubTitle}>{titleBold}</strong></h2>
         <p className={classNames(styles.text, clText)}>{text}</p>
       </div>
     )

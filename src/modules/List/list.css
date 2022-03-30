@@ -19,3 +19,9 @@
     margin-right: 23px;
     text-align: center;
 }
+
+@media (min-width:1440px) {
+    .li {
+        width: 100%;
+    }
+}

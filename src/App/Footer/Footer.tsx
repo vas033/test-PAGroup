@@ -48,7 +48,7 @@ export function Footer() {
         <div className={styles.infoNav}>
           <div className={styles.infoContainer}>
             <div className={styles.linkContainer}>
-              <a className={styles.mail} href="mailto:dsgn@pagroup.ru">dsgn@pagroup.ru</a>
+              <a className={styles.mail} href="mailto:designer.pagroup@gmail.com">designer.pagroup@gmail.com</a>
               <div className={styles.hiddenLinkBorder}></div>
             </div>
             <div className={styles.firmTaxInfo}>

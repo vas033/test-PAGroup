@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { default: Slider } = require('react-slick');
 const { webpack } = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const metaImg = require('./src/img/meta.png')
 
 const NODE_ENV = process.env.NODE_ENV;
 const GLOBAL_CSS_REGEXP = /\.global\.css$/;
@@ -26,22 +27,13 @@ module.exports = {
         ],
         output: {
                 path: path.resolve(__dirname, 'dist'),
-                filename: 'main[contenthash].js'
+                filename: 'main[contenthash].js',
         },
         module: {
                 rules: [{
                                 test: /\.[tj]sx?$/,
                                 use: 'ts-loader',
                                 exclude: /node_modules/
-                                        // exclude: /node_modules/,
-                                        // use: ['babel-loader', {
-                                        //         options: {
-                                        //                 presets: [
-                                        //                         '@babel/preset-react'
-                                        //                 ],
-                                        //                 plugins: ['@babel/plugin-syntax-jsx']
-                                        //         }
-                                        // }],
                         },
                         {
                                 test: GLOBAL_CSS_REGEXP,

@@ -64,6 +64,10 @@
     line-height: 152%;
 }
 
+.subTitle {
+    display: block;
+}
+
 @media(min-width:768px) {
     .sectionTen {
         margin: 0 14px 0 14px;
@@ -133,7 +137,7 @@
     }
     .title,
     .description {
-        width: 80%;
+        width: 60%;
     }
     .title {
         font-size: 60px;
@@ -179,7 +183,7 @@
     }
     .title,
     .description {
-        width: 60%;
+        width: 50%;
     }
     .title {
         font-size: 60px;

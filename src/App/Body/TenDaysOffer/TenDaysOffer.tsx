@@ -13,11 +13,12 @@ export function TenDaysOffer() {
     <div className={styles.sectionTen}>
       <TextDiv
         cl={styles.container}
-        title='Креативные информационные
-      сайты '
+        title='Крутые лендинги'
         titleBold='за 10 дней'
-        text='Сделаем крутой информационный сайт и выделим вас среди конкурентов. Посетители точно захотят нажать заветную кнопку.'
+        text='Сделаем крутой лендинг и выделим вас среди конкурентов.
+         Посетители точно захотят нажать заветную кнопку.'
         clTitle={styles.title}
+        clSubTitle={styles.subTitle}
         clText={classNames(styles.marginBottom50, styles.description)}
       />
       <div className={styles.containerImg}>
