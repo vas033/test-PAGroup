@@ -8,6 +8,7 @@
 .navLink {
     margin-right: 32px;
     overflow: hidden;
+    text-align: start;
 }
 
 .navSpan {
@@ -17,7 +18,7 @@
 .navBorder {
     padding-top: 5px;
     padding-bottom: unset;
-    transform: translateX(-100%);
+    transform: translateX(-120%);
     border-bottom: 2px solid black;
     transition: all .3s ease;
 }

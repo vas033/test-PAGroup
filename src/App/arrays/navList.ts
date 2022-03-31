@@ -1,22 +1,22 @@
 const navList = [
         {
                 name: 'Что мы предлагаем',
-                link: '#Offer'
+                link: 'Offer'
         },
         {
                 name: 'Спецпроекты',
-                link: '#SpecProject'
+                link: 'SpecProject'
         },
         {
                 name: 'Отзывы',
-                link: '#Comments'
+                link: 'Comments'
         },
         {
                 name: 'ЧаВо',
-                link: '#FAQ'
+                link: 'FAQ'
         },{
                 name: 'Оставить заявку',
-                link: '#footer'
+                link: 'footer'
         },
 ]
 

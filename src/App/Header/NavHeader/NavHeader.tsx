@@ -3,6 +3,8 @@ import classNames from '../../../modules/className';
 import styles from './navheader.css';
 import burger from './burger.css';
 import navList from '../../arrays/navList';
+import getCoords from '../../../modules/getCoords';
+import {scrollTo} from '../../../hooks/navScrollTo';
 
 export function NavHeader() {
   function onClick() {
@@ -11,7 +13,7 @@ export function NavHeader() {
     btn ? btn.classList.toggle(burger.open) : '';
     menu ? menu.classList.toggle(burger.showMenu) : '';
   }
-
+  
   const [width, setWidth] = useState(window.innerWidth);
   const handleResize = () => setWidth(window.innerWidth);
   useEffect(() => {
@@ -31,11 +33,11 @@ export function NavHeader() {
         <div className={burger.hiddenMenu} id='menu'>
           <div className={burger.menu}>
             <nav className={styles.nav}>
-              {navList.map(el => 
-                  <a className={styles.navLink} href={el.link} key={navList.indexOf(el)} onClick={() => onClick()}>
-                    <span className={styles.navSpan}>{el.name}</span>
-                    <span className={classNames(styles.navSpan, styles.navBorder)}></span>
-                    </a>                  
+              {navList.map(el =>
+                <button className={styles.navLink} key={navList.indexOf(el)} onClick={() => {onClick(); scrollTo(el.link)}}>
+                  <span className={styles.navSpan}>{el.name}</span>
+                  <span className={classNames(styles.navSpan, styles.navBorder)}></span>
+                </button>
               )}
             </nav>
             <div>
@@ -72,12 +74,12 @@ export function NavHeader() {
     return (
       <div className={styles.navigationDiv}>
         <nav className={styles.nav}>
-          {navList.map(el => 
-                  <a className={styles.navLink} href={el.link} key={navList.indexOf(el)} onClick={() => onClick()} >
-                    <span className={styles.navSpan}>{el.name}</span>
-                    <span className={classNames(styles.navSpan, styles.navBorder)}></span>
-                  </a>                  
-              )}
+          {navList.map(el =>
+            <button className={styles.navLink} key={navList.indexOf(el)} onClick={() => scrollTo(el.link)}>
+              <span className={styles.navSpan}>{el.name}</span>
+              <span className={classNames(styles.navSpan, styles.navBorder)}></span>
+            </button>
+          )}
         </nav>
         <div>
           <button

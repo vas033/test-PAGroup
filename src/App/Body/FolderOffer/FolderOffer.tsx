@@ -33,6 +33,8 @@ export function FolderOffer({scrollPos, windowHeight, windowWidth}:IMyFolderOffe
       } else if (diff<0 && scaleCoeff >= 1) {
         offer.style.transform = 'translateY(0) scale(1)'
       }
+    } else {
+      offer.style.transform = 'translateY(0) scale(1)'
     }
   }
 

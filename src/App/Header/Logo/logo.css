@@ -27,6 +27,7 @@
 @media (min-width: 1220px) {
     .headerLogoDiv {
         flex: 0 0 134px;
+        margin-right: 90px;
     }
     .logoTitle {
         font-family: 'Visby Medium Italic';

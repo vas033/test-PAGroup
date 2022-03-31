@@ -107,7 +107,7 @@ button.container.open .burger span:last-child {
     flex-direction: column;
 }
 
-.menu nav a {
+.menu nav button {
     width: fit-content;
     margin-bottom: 25px;
     font-size: 24px;

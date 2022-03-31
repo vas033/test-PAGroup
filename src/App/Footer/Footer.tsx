@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { scrollTo } from '../../hooks/navScrollTo';
 import { scroll } from '../../hooks/scroll';
 import classNames from '../../modules/className';
 import getCoords from '../../modules/getCoords';
@@ -58,7 +59,7 @@ export function Footer() {
           </div>
           <nav className={classNames(styles.flexColumn, styles.nav)}>
             {navList.map((el) =>
-                <a className={styles.navLinks} key={navList.indexOf(el)} href={el.link}>{el.name}</a>
+                <button className={styles.navLinks} key={navList.indexOf(el)} onClick={() => scrollTo(el.link)}>{el.name}</button>
             )}
           </nav>
         </div>

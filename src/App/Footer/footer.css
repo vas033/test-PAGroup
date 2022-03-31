@@ -15,8 +15,13 @@
 }
 
 .container a,
+.container button,
 .container {
     color: white;
+}
+
+.container button {
+    text-align: start;
 }
 
 .hiddenLink,
@@ -151,7 +156,7 @@ span.hiddenLinkBorder {
         text-align: start;
     }
     .navLinks {
-        flex: 0 0 31%;
+        flex: 0 0 33%;
         line-height: 240%;
         letter-spacing: unset;
     }
@@ -160,9 +165,6 @@ span.hiddenLinkBorder {
     }
     .navLinks:nth-child(-n+3) {
         margin-bottom: 25px;
-    }
-    .navLinks:nth-child(3n+1) {
-        margin-right: 25px;
     }
     .lisence {
         font-size: 20px;
@@ -205,10 +207,14 @@ span.hiddenLinkBorder {
     .navLinks:nth-child(-n+3) {
         margin-bottom: 20px;
     }
+    .navLinks:nth-child(3n+1) {
+        margin-right: 25px;
+    }
     .flexColumn {
         align-items: flex-start;
     }
     .navLinks {
+        flex: 0 0 31%;
         line-height: unset;
     }
 }
