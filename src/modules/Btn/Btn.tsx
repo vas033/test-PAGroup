@@ -22,7 +22,7 @@ export function Btn({ text, inverse = false, a = false, href, header = false, bo
 
   if (a) {
     return (
-      <a className={classNames(mainClass, styles.block, classes)} href={href} onClick={(e) => e.preventDefault}>
+      <a className={classNames(mainClass, styles.block, classes)} href={href} target='_blank' onClick={(e) => e.preventDefault}>
         <span className={styles.buttonTitle}>
           <span data-text={text}>{text}</span>
         </span>
