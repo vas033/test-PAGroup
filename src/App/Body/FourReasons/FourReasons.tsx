@@ -42,7 +42,7 @@ export function FourReasons() {
         />
       </div>
       <div className={styles.btn}>
-        <Btn a={true} href='https://t.me/pagroup1' text='наш telegram канал о дизайне' />
+        <Btn a={true} href='https://t.me/antipoff_group' text='наш telegram канал о дизайне' />
       </div>
     </section>
   );
