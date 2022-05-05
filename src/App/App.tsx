@@ -24,6 +24,7 @@ import { CookieWindow } from './CookieWindow';
 import { scroll } from '../hooks/scroll';
 import getCoords from '../modules/getCoords';
 import { BottomMenu } from './BottomMenu';
+import video from '../video/background-logo-block.e1e434b.webm';
 
 export function App() {
   const { scrollPos, windowHeight, windowWidth } = scroll();
@@ -40,6 +41,9 @@ export function App() {
       {/* <BottomMenu scrollPos={scrollPos} /> */}
       <div id='faceBlock' className={classNames(styles.backgroundHead, styles.paddingSides)}>
         <img className={styles.backgroundHeadImg} src={backHead1} alt='bacground header' onContextMenu={()=>{return false}} />
+        <video className={styles.backgroundVideo} src={video} loop muted autoPlay>
+          <source src={video} type='video/webm' />
+        </video>
         <div className={styles.inherit}>
           <div className={styles.header}>
             <Header scrollPos={scrollPos} />
@@ -52,14 +56,14 @@ export function App() {
         <Offer />
         <SliderTwo />
         <div className={styles.orientCenter}>
-          <Btn text='смотреть на behance' a={true} href='https://www.behance.net/pa_group' />
+          <Btn text='смотреть на behance' a={true} href='https://www.behance.net/antipoff_group' />
         </div>
         <FourReasons />
         <h2 id='SpecProject' className={classNames(styles.sectionTitle, styles.sectionPadding)}>Спецпроекты</h2>
         <FolderOffer scrollPos={scrollPos} windowHeight={windowHeight} windowWidth={windowWidth} />
         <TenDaysOffer />
         <Comments scrollPos={scrollPos} windowHeight={windowHeight} />
-        <FAQ />
+        {/* <FAQ /> */}
       </Body>
       <Footer />
     </Layout>

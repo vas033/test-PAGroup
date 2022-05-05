@@ -62,7 +62,7 @@ module.exports = {
                                 exclude: [GLOBAL_CSS_REGEXP, SLICK_CSS]
                         },
                         {
-                                test: /\.(png|jpg|svg)$/i,
+                                test: /\.(webm|png|jpg|svg)$/i,
                                 type: 'asset'
                         }
                 ]

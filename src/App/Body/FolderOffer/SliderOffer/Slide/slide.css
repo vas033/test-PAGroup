@@ -32,7 +32,7 @@
 
 .slide {
     padding: 40px 24px;
-    height: 1195px;
+    height: 930px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -117,7 +117,7 @@
 }
 
 .flex33 {
-    flex: 0 0 32%;
+    flex: 0 0 22%;
 }
 
 .flex40 {
@@ -141,6 +141,9 @@
         width: 76%;
         line-height: 160%;
         letter-spacing: unset;
+    }
+    .flex33 {
+        flex: 0 0 32%;
     }
     .price {
         font-size: 32px;

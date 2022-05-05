@@ -1,3 +1,7 @@
+footer {
+    overflow: hidden;
+}
+
 .block {
     display: block;
 }
@@ -11,6 +15,8 @@
 .container {
     padding: 32px 24px 40px 24px;
     background-color: #131027;
+    transform: translate3d(0, -50%, 0);
+    will-change: transform;
     text-align: center;
 }
 

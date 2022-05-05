@@ -7,17 +7,16 @@ import navList from '../arrays/navList';
 import styles from './footer.css';
 
 export function Footer() {
-  let pos = scroll();
 
+  
+  let pos = scroll();
+  
   const footer = document.getElementById('footer');
   const content = document.getElementById('footerContent')
   let coords;
 
   if (footer && content) {
     coords = getCoords(footer);
-    footer.style.overflow = 'hidden';
-    content.style.transform = 'translate3d( 0, -50%, 0)';
-    content.style.willChange = 'transform';
 
     let currentPos = pos.scrollPos + pos.windowHeight;
 
@@ -29,7 +28,6 @@ export function Footer() {
 
       if (content && percent <= 0) {
         content.style.transform = `translate3d( 0, ${percent}%, 0)`;
-        content.style.willChange = 'transform';
       } else {
         content.style.transform = 'translate3d( 0, 0, 0)';
       }
