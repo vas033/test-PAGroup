@@ -11,10 +11,11 @@ const navList = [
                 name: 'Отзывы',
                 link: 'Comments'
         },
+        // {
+        //         name: 'ЧаВо',
+        //         link: 'FAQ'
+        // },
         {
-                name: 'ЧаВо',
-                link: 'FAQ'
-        },{
                 name: 'Оставить заявку',
                 link: 'footer'
         },
